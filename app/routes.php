@@ -11,12 +11,14 @@
 |
 */
 
-// Route::get('/', function()
-// {
-// 	return View::make('hello');
-// });
 
 
+
+//adding route for postsmcontroller.
+Route::resource('posts', 'PostController');
+
+
+
+//adding route to index page.
 Route::get('/', 'HomeController@index');
 
-Route::get('/category', 'PostController@index');
