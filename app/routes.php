@@ -11,16 +11,13 @@
 |
 */
 
-<<<<<<< HEAD
+
 
 
 //adding route for postsmcontroller.
 Route::resource('posts', 'PostController');
 
-=======
-
 
 
 //adding route to index page.
 Route::get('/', 'HomeController@index');
->>>>>>> master
