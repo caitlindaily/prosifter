@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
 <!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
-<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<!--[if gt IE 9]><!-->	
+<html> <!--<![endif]-->
 	<head>
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Grid System | Porto - Responsive HTML5 Template 3.1.0</title>		
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="Porto - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+		<title>proSifter - best service provider, made easy!</title>		
+		<meta name="keywords" content=" " />
+		<meta name="description" content="proSifter - an intuitive and easy to use website that makes finding the best service providers">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,32 +18,36 @@
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
 
 		<!-- Libs CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
-		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" media="screen">
-		<link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" media="screen">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-		<link rel="stylesheet" href="vendor/isotope/jquery.isotope.css" media="screen">
-		<link rel="stylesheet" href="vendor/mediaelement/mediaelementplayer.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="assets/vendor/owl-carousel/owl.carousel.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/owl-carousel/owl.theme.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/isotope/jquery.isotope.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/mediaelement/mediaelementplayer.css" media="screen">
 
 		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/theme.css">
-		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
-		<link rel="stylesheet" href="css/theme-animate.css">
+		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/theme-elements.css">
+		<link rel="stylesheet" href="assets/css/theme-blog.css">
+		<link rel="stylesheet" href="assets/css/theme-shop.css">
+		<link rel="stylesheet" href="assets/css/theme-animate.css">
+
+		<!-- Current Page CSS -->
+		<link rel="stylesheet" href="assets/vendor/rs-plugin/css/settings.css" media="screen">
+		<link rel="stylesheet" href="assets/vendor/circle-flip-slideshow/css/component.css" media="screen">
 
 		<!-- Responsive CSS -->
-		<link rel="stylesheet" href="css/theme-responsive.css" />
+		<link rel="stylesheet" href="assets/css/theme-responsive.css" />
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css">
+		<link rel="stylesheet" href="assets/css/skins/default.css">
 
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="assets/css/custom.css">
 
 		<!-- Head Libs -->
-		<script src="vendor/modernizr.js"></script>
+		<script src="assets/vendor/modernizr.js"></script>
 
 		<!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
@@ -55,13 +59,12 @@
 
 	</head>
 	<body>
-
 		<div class="body">
 			<header id="header">
 				<div class="container">
 					<h1 class="logo">
 						<a href="index.html">
-							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="img/logo.png">
+							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="assets/img/logo.png">
 						</a>
 					</h1>
 					<div class="search">
@@ -100,7 +103,7 @@
 						</ul>
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
-								<li class="dropdown">
+								<li class="dropdown active">
 									<a class="dropdown-toggle" href="#">
 										Home
 										<i class="icon icon-angle-down"></i>
@@ -135,7 +138,7 @@
 										<li><a href="about-me.html">About Me</a></li>
 									</ul>
 								</li>
-								<li class="dropdown mega-menu-item mega-menu-fullwidth active">
+								<li class="dropdown mega-menu-item mega-menu-fullwidth">
 									<a class="dropdown-toggle" href="#">
 										Features
 										<i class="icon icon-angle-down"></i>
@@ -270,89 +273,9 @@
 				</div>
 			</header>
 
-			<div role="main" class="main">
 
-				<section class="page-top">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="breadcrumb">
-									<li><a href="#">Home</a></li>
-									<li class="active">Features</li>
-								</ul>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<h2>Grid System</h2>
-							</div>
-						</div>
-					</div>
-				</section>
+@yield('content')
 
-				<div class="container">
-
-					<h2>Default Grid System</h2>
-
-					<div class="row">
-						<div class="col-md-12">
-							<p class="lead">
-								Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases.
-							</p>
-							<p>
-								Learn more: <a href="http://getbootstrap.com/css/#grid" target="_blank">http://getbootstrap.com/css/#grid</a>
-							</p>
-						</div>
-					</div>
-
-					<hr class="tall">
-
-						<div class="row show-grid">
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-							<div class="col-md-1"><span class="show-grid-block">1</span></div>
-						</div>
-
-						<hr class="short">
-
-						<div class="row show-grid">
-							<div class="col-md-4"><span class="show-grid-block">4</span></div>
-							<div class="col-md-4"><span class="show-grid-block">4</span></div>
-							<div class="col-md-4"><span class="show-grid-block">4</span></div>
-						</div>
-
-						<hr class="short">
-
-						<div class="row show-grid">
-							<div class="col-md-4"><span class="show-grid-block">4</span></div>
-							<div class="col-md-8"><span class="show-grid-block">8</span></div>
-						</div>
-
-						<hr class="short">
-
-						<div class="row show-grid">
-							<div class="col-md-6"><span class="show-grid-block">6</span></div>
-							<div class="col-md-6"><span class="show-grid-block">6</span></div>
-						</div>
-
-						<hr class="short">
-
-						<div class="row show-grid">
-							<div class="col-md-12"><span class="show-grid-block">12</span></div>
-						</div>
-
-				</div>
-
-			</div>
 
 			<footer id="footer">
 				<div class="container">
@@ -371,7 +294,7 @@
 			
 								<div class="alert alert-danger hidden" id="newsletterError"></div>
 			
-								<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+								<form id="newsletterForm" action="/assets/php/newsletter-subscribe.php" method="POST">
 									<div class="input-group">
 										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
 										<span class="input-group-btn">
@@ -414,7 +337,7 @@
 						<div class="row">
 							<div class="col-md-1">
 								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="img/logo-footer.png">
+									<img alt="Porto Website Template" class="img-responsive" src="assets/img/logo-footer.png">
 								</a>
 							</div>
 							<div class="col-md-7">
@@ -436,28 +359,34 @@
 		</div>
 
 		<!-- Libs -->
-		<script src="vendor/jquery.js"></script>
-		<script src="vendor/jquery.appear.js"></script>
-		<script src="vendor/jquery.easing.js"></script>
-		<script src="vendor/jquery.cookie.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.js"></script>
-		<script src="vendor/jquery.validate.js"></script>
-		<script src="vendor/jquery.stellar.js"></script>
-		<script src="vendor/jquery.knob.js"></script>
-		<script src="vendor/jquery.gmap.js"></script>
-		<script src="vendor/twitterjs/twitter.js"></script>
-		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="vendor/owl-carousel/owl.carousel.js"></script>
-		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/magnific-popup.js"></script>
-		<script src="vendor/mediaelement/mediaelement-and-player.js"></script>
+		<script src="assets/vendor/jquery.js"></script>
+		<script src="assets/vendor/jquery.appear.js"></script>
+		<script src="assets/vendor/jquery.easing.js"></script>
+		<script src="assets/vendor/jquery.cookie.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+		<script src="assets/vendor/jquery.validate.js"></script>
+		<script src="assets/vendor/jquery.stellar.js"></script>
+		<script src="assets/vendor/jquery.knob.js"></script>
+		<script src="assets/vendor/jquery.gmap.js"></script>
+		<script src="assets/vendor/twitterjs/twitter.js"></script>
+		<script src="assets/vendor/isotope/jquery.isotope.js"></script>
+		<script src="assets/vendor/owl-carousel/owl.carousel.js"></script>
+		<script src="assets/vendor/jflickrfeed/jflickrfeed.js"></script>
+		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+		<script src="assets/vendor/mediaelement/mediaelement-and-player.js"></script>
 		
 		<!-- Theme Initializer -->
-		<script src="js/theme.plugins.js"></script>
-		<script src="js/theme.js"></script>
+		<script src="assets/js/theme.plugins.js"></script>
+		<script src="assets/js/theme.js"></script>
+		
+		<!-- Current Page JS -->
+		<script src="assets/vendor/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+		<script src="assets/vendor/rs-plugin/js/jquery.themepunch.revolution.js"></script>
+		<script src="assets/vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
+		<script src="assets/js/views/view.home.js"></script>
 		
 		<!-- Custom JS -->
-		<script src="js/custom.js"></script>
+		<script src="assets/js/custom.js"></script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script type="text/javascript">
