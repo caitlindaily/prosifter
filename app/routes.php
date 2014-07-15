@@ -15,7 +15,7 @@
 
 
 //adding route for postsmcontroller.
-Route::resource('posts', 'PostController');
+Route::resource('posts', 'PostsController');
 
 
 
