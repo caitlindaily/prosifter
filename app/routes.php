@@ -18,3 +18,5 @@
 
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/category', 'PostController@index');
