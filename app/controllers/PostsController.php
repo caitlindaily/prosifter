@@ -27,7 +27,7 @@ class PostsController extends \BaseController {
 
 	public function create()
 	{
-		return View::make('create-edit');
+		return View::make('Post.create-edit');
 	}
 
 	public function store()
@@ -70,7 +70,7 @@ class PostsController extends \BaseController {
 	public function edit($id)
 	{
 		$post = Post::find($id);
-		return View::make('posts.create-edit')->with('post', $post);
+		return View::make('Post.create-edit')->with('post', $post);
 
 	}
 
