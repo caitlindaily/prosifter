@@ -12,18 +12,18 @@ class PostsController extends \BaseController {
 	// }
 
 	public function index()
-	{		
+	{
 		$query = Post::with('user');
 
 		if (Input::has('search')) {
 
 			$search = Input::get('search');
 			$query->where('title', 'LIKE', "%$search%");
-		} 
+		}
 		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
 		return View::make('posts.index')->with('posts', $posts);
 	}
-        	
+
 
 	public function create()
 	{
@@ -48,7 +48,7 @@ class PostsController extends \BaseController {
 			$post->body = Input::get('body');
 			$post->slug = Input::get('title');
 			$post->save();
-			if (Input::hasFile('image') && Input::file('image')->isValid()) 
+			if (Input::hasFile('image') && Input::file('image')->isValid())
 			{
 				$post->addUploadedImage(Input::file('image'));
 				$post->save();
@@ -61,7 +61,7 @@ class PostsController extends \BaseController {
 
 
 	public function show($slug)
-	{	
+	{
 		$post = Post::findBySlug($slug);
 		return View::make('posts.show')->with('post', $post);
 	}
@@ -71,7 +71,7 @@ class PostsController extends \BaseController {
 	{
 		$post = Post::find($id);
 		return View::make('posts.create-edit')->with('post', $post);
-		
+
 	}
 
 
@@ -92,7 +92,7 @@ class PostsController extends \BaseController {
 			$post->body = Input::get('body');
 			$post->slug = Input::get('title');
 			$post->save();
-			if (Input::hasFile('image') && Input::file('image')->isValid()) 
+			if (Input::hasFile('image') && Input::file('image')->isValid())
 			{
 				$post->addUploadedImage(Input::file('image'));
 				$post->save();
