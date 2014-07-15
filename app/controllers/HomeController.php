@@ -15,6 +15,7 @@ class HomeController extends BaseController {
 	|
 	*/
 
+
 	// public function showWelcome()
 	// {
 	// 	return View::make('hello');
@@ -22,9 +23,10 @@ class HomeController extends BaseController {
 
 
 	// START NAVIGATION METHODS ///////////////
-	public function index() 
+	public function index()
 	{
 		return View::make('index');
+
 	}
 
 }
