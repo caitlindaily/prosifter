@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+//adding route to home page.
+Route::get('/', 'HomeController@showHomepage');
+
+//adding route for postsmcontroller.
+Route::resource('posts', 'PostController');
+
