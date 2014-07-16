@@ -10,18 +10,21 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+//adding route to index page.
+Route::get('/', 'HomeController@index');
 
 View::share('categories', Category::all());
 
 //adding route for postsmcontroller.
 Route::resource('posts', 'PostsController');
+
+// user routes
 Route::get('/login', 'HomeController@showLogin');
 Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
+
+// category routes
 Route::get('/category/{name}', 'CategoryController@findCategory');
 
-
-//adding route to index page.
-Route::get('/', 'HomeController@index');
-
+// provider routes
+Route::get('/provider/{name}', 'ProviderController@findProvider');
