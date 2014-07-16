@@ -12,14 +12,14 @@
 */
 
 
-
+View::share('categories', Category::all());
 
 //adding route for postsmcontroller.
 Route::resource('posts', 'PostsController');
 Route::get('/login', 'HomeController@showLogin');
 Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
-
+Route::get('/category/{name}', 'CategoryController@findCategory');
 
 
 //adding route to index page.

@@ -43,18 +43,22 @@ class PostsController extends \BaseController {
 		} else {
 
 			$post = new Post();
-			$post->user_id = 12;
+			$post->user_id = Auth::user()->id;
+			$post->provider_id = 1;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			// $post->slug = Input::get('title');
 			$post->save();
+
+
+
 			if (Input::hasFile('image') && Input::file('image')->isValid())
 			{
 				$post->addUploadedImage(Input::file('image'));
 				$post->save();
 			}
 			Session::flash('successMessage', 'Post was created successfully!!!');
-			return Redirect::action('PostsController@show');
+			return Redirect::action('PostsController@index');
 		}
 
 	}
@@ -98,7 +102,7 @@ class PostsController extends \BaseController {
 				$post->save();
 			}
 			Session::flash('successMessage', 'Your post was updated!!!');
-			return Redirect::action('PostsController@show');
+			return Redirect::action('PostsController@index');
 		}
 	}
 

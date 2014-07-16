@@ -127,13 +127,10 @@
 															<li>
 																<span class="mega-menu-sub-title">Categories</span>
 																<ul class="sub-menu">
-																	<li><a href="/beauty">Beauty</a></li>
-																	<li><a href="/health">Health</a></li>
-																	<li><a href="/home-garden">Home &amp Garden</a></li>
-																	<li><a href="/auto">Auto</a></li>
-																	<li><a href="/pets">Pets</a></li>
-																	<li><a href="/events">Events</a></li>
-																	<li><a href="/recreation">Recreation</a></li>
+																	@foreach($categories as $category)
+																	<li>{{ link_to_action('CategoryController@findCategory', $category->name, [$category->name]) }}</li>
+																
+																	@endforeach
 																</ul>
 															</li>
 														</ul>
@@ -142,8 +139,12 @@
 											</div>
 										</li>
 									</ul>
+								@if (Auth::check())
 								</li>
-
+								
+						            <li><h3 class="welcome-title">Welcome, <a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h3></li>  
+						            <li>{{ link_to_action('HomeController@logout', 'Log Out') }}</li>
+            					@else
 								<!-- SIGN IN TAB & FORM START -->
 								<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
 									<a class="dropdown-toggle" href="page-login.html">
@@ -190,7 +191,7 @@
 																	</div>
 																</div>
 															{{ Form::close() }}
-
+																
 															<p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up!</a></p>
 
 														</div>
@@ -255,6 +256,7 @@
 									</ul>
 								</li>
 								<!-- END SIGN IN TAB & FORM -->
+								@endif
 							</ul>
 						</nav>
 					</div>
