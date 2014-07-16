@@ -21,7 +21,7 @@ class PostsController extends \BaseController {
 			$query->where('title', 'LIKE', "%$search%");
 		}
 		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
-		return View::make('posts.index')->with('posts', $posts);
+		return View::make('index')->with('posts', $posts);
 	}
 
 
@@ -43,10 +43,10 @@ class PostsController extends \BaseController {
 		} else {
 
 			$post = new Post();
-			$post->user_id = Auth::user()->id;
+			$post->user_id = 12;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-			$post->slug = Input::get('title');
+			// $post->slug = Input::get('title');
 			$post->save();
 			if (Input::hasFile('image') && Input::file('image')->isValid())
 			{

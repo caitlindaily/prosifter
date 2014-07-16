@@ -6,7 +6,7 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Porto - Responsive HTML5 Template 3.1.0</title>		
+		<title>Porto - Responsive HTML5 Template 3.1.0</title>
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -106,7 +106,7 @@
 									<a href="#">
 										Home
 									</a>
-									
+
 								</li>
 								<li>
 									<a class="dropdown-toggle" href="#">
@@ -137,7 +137,7 @@
 																</ul>
 															</li>
 														</ul>
-													</div>													
+													</div>
 												</div>
 											</div>
 										</li>
@@ -160,8 +160,8 @@
 
 															<span class="mega-menu-sub-title">Sign In</span>
 
-															<form action="" id="" type="post">
-																<div class="row">
+															{{ Form::open(array('action' => 'HomeController@doLogin')) }}
+																<div class="row">_
 																	<div class="form-group">
 																		<div class="col-md-12">
 																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
@@ -188,7 +188,7 @@
 																		<input type="submit" value="Login" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
 																	</div>
 																</div>
-															</form>
+															{{ Form::close() }}
 
 															<p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up!</a></p>
 
@@ -339,7 +339,7 @@
 		<script src="/vendor/jflickrfeed/jflickrfeed.js"></script>
 		<script src="/vendor/magnific-popup/magnific-popup.js"></script>
 		<script src="/vendor/mediaelement/mediaelement-and-player.js"></script>
-		
+
 		<!-- Theme Initializer -->
 		<script src="/js/theme.plugins.js"></script>
 		<script src="/js/theme.js"></script>
@@ -348,23 +348,23 @@
 		<script src="/vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
 		<script src="/vendor/nivo-slider/jquery.nivo.slider.js"></script>
 		<script src="/js/views/view.home.js"></script>
-		
+
 		<!-- Custom JS -->
 		<script src="/js/custom.js"></script>
 
 		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
 		<script type="text/javascript">
-		
+
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-12345678-1']);
 			_gaq.push(['_trackPageview']);
-		
+
 			(function() {
 			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-		
+
 		</script>
 		 -->
 
