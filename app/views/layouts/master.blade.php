@@ -72,14 +72,15 @@
 					</h1>
 					<!-- SEARCH BAR -->
 					<div class="search">
-						<form id="searchForm" action="page-search-results.html" method="get">
+					{{ Form::open(array('id' => 'searchForm', 'method' => 'get')) }}
+						<!-- <form id="searchForm" action="page-search-results.html" method="get"> -->
 							<div class="input-group">
 								<input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
 								</span>
 							</div>
-						</form>
+						{{ Form::close() }}
 					</div>
 					<!-- SOCIAL PAGE LINKS -->
 					<ul class="social-icons">
@@ -145,8 +146,11 @@
 								</li>
 
 								<!-- SIGN IN TAB & FORM START -->
+
 								<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
+
 									<a class="dropdown-toggle" href="page-login.html">
+
 										<i class="icon icon-user"></i> Sign In
 										<i class="icon icon-angle-down"></i>
 									</a>
@@ -157,14 +161,12 @@
 													<div class="col-md-12">
 
 														<div class="signin-form">
-
 															<span class="mega-menu-sub-title">Sign In</span>
-
 															{{ Form::open(array('action' => 'HomeController@doLogin')) }}
 																<div class="row">_
 																	<div class="form-group">
 																		<div class="col-md-12">
-																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
+																			<input name="email"type="text" value="" class="form-control input-lg" placeholder="e-mail">
 																		</div>
 																	</div>
 																</div>
@@ -172,7 +174,7 @@
 																	<div class="form-group">
 																		<div class="col-md-12">
 																			<a class="pull-right" id="headerRecover" href="#">(Lost Password?)</a>
-																			<input type="password" value="" class="form-control input-lg" placeholder="password">
+																			<input name="password" type="password" value="" class="form-control input-lg" placeholder="password">
 																		</div>
 																	</div>
 																</div>
@@ -253,6 +255,7 @@
 										</li>
 									</ul>
 								</li>
+
 								<!-- END SIGN IN TAB & FORM -->
 							</ul>
 						</nav>
