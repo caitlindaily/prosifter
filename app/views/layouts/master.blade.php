@@ -62,13 +62,15 @@
 	<body>
 
 		<div class="body">
+			<!-- HEADER/NAVIGATION START -->
 			<header id="header">
 				<div class="container">
 					<h1 class="logo">
-						<a href="index.html">
+						<a href="/">
 							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="/img/logo.png">
 						</a>
 					</h1>
+					<!-- SEARCH BAR -->
 					<div class="search">
 						<form id="searchForm" action="page-search-results.html" method="get">
 							<div class="input-group">
@@ -79,6 +81,7 @@
 							</div>
 						</form>
 					</div>
+					<!-- SOCIAL PAGE LINKS -->
 					<ul class="social-icons">
 						<li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a></li>
 						<li class="twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter">Twitter</a></li>
@@ -87,13 +90,7 @@
 					<nav>
 						<ul class="nav nav-pills nav-top">
 							<li>
-								<a href="#section-1"><i class="icon icon-angle-right"></i>About Us</a>
-							</li>
-							<li>
 								<a href="contact-us.html"><i class="icon icon-angle-right"></i>Contact Us</a>
-							</li>
-							<li class="phone">
-								<span><i class="icon icon-phone"></i>(123) 456-7890</span>
 							</li>
 						</ul>
 					</nav>
@@ -147,6 +144,7 @@
 									</ul>
 								</li>
 
+								<!-- SIGN IN TAB & FORM START -->
 								<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
 									<a class="dropdown-toggle" href="page-login.html">
 										<i class="icon icon-user"></i> Sign In
@@ -166,8 +164,7 @@
 																<div class="row">
 																	<div class="form-group">
 																		<div class="col-md-12">
-																			<label>Username or E-mail Address</label>
-																			<input type="text" value="" class="form-control input-lg">
+																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
 																		</div>
 																	</div>
 																</div>
@@ -175,8 +172,7 @@
 																	<div class="form-group">
 																		<div class="col-md-12">
 																			<a class="pull-right" id="headerRecover" href="#">(Lost Password?)</a>
-																			<label>Password</label>
-																			<input type="password" value="" class="form-control input-lg">
+																			<input type="password" value="" class="form-control input-lg" placeholder="password">
 																		</div>
 																	</div>
 																</div>
@@ -205,20 +201,17 @@
 																<div class="row">
 																	<div class="form-group">
 																		<div class="col-md-12">
-																			<label>E-mail Address</label>
-																			<input type="text" value="" class="form-control input-lg">
+																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<div class="col-md-6">
-																			<label>Password</label>
-																			<input type="password" value="" class="form-control input-lg">
+																			<input type="password" value="" class="form-control input-lg" placeholder="password">
 																		</div>
 																		<div class="col-md-6">
-																			<label>Re-enter Password</label>
-																			<input type="password" value="" class="form-control input-lg">
+																			<input type="password" value="" class="form-control input-lg" placeholder="re-enter password">
 																		</div>
 																	</div>
 																</div>
@@ -240,8 +233,7 @@
 																<div class="row">
 																	<div class="form-group">
 																		<div class="col-md-12">
-																			<label>E-mail Address</label>
-																			<input type="text" value="" class="form-control input-lg">
+																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
 																		</div>
 																	</div>
 																</div>
@@ -261,12 +253,13 @@
 										</li>
 									</ul>
 								</li>
+								<!-- END SIGN IN TAB & FORM -->
 							</ul>
 						</nav>
 					</div>
 				</div>
 			</header>
-
+			<!-- END HEADER/NAVIGATION -->
 
 @yield('content')
 
@@ -274,44 +267,22 @@
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
-						<div class="footer-ribbon">
-							<span>Get in Touch</span>
-						</div>
-						<div class="col-md-3">
-							<div class="newsletter">
-								<h4>Newsletter</h4>
-								<p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-			
-								<div class="alert alert-success hidden" id="newsletterSuccess">
-									<strong>Success!</strong> You've been added to our email list.
-								</div>
-			
-								<div class="alert alert-danger hidden" id="newsletterError"></div>
-			
-								<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
-									<div class="input-group">
-										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="submit">Go!</button>
-										</span>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<h4>Latest Tweet</h4>
-							<div id="tweet" class="twitter" data-account-id="">
-								<p>Please wait...</p>
-							</div>
-						</div>
 						<div class="col-md-4">
 							<div class="contact-details">
 								<h4>Contact Us</h4>
 								<ul class="contact">
-									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 1234 Street Name, City Name, United States</p></li>
-									<li><p><i class="icon icon-phone"></i> <strong>Phone:</strong> (123) 456-7890</p></li>
-									<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">mail@example.com</a></p></li>
+									<li><p><i class="icon icon-map-marker"></i> <strong>Address:</strong> 112 E Pecan St, San Antonio, TX</p></li>
+									<li><p><i class="icon icon-phone"></i> <strong>Phone:</strong> (210) 865-3782</p></li>
+									<li><p><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:info@prosifter.com">info@prosifter.com</a></p></li>
 								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="contact-details">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="contact-details">
 							</div>
 						</div>
 						<div class="col-md-2">
