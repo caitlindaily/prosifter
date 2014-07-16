@@ -21,3 +21,4 @@ Route::resource('posts', 'PostsController');
 
 //adding route to index page.
 Route::get('/', 'HomeController@index');
+

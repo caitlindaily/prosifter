@@ -43,16 +43,16 @@ class Post extends BaseModel {
         return $clean_html;
     }
 
-    public function setSlugAttribute ($title) 
+    public function setSlugAttribute ($title)
     {
         $title = str_replace(' ', '-', trim($title));
         $this->attributes['slug'] = strtolower($title);
     }
 
-    static public function findBySlug($slug) 
+    static public function findBySlug($slug)
     {
        $post = self::where('slug', $slug)->first();
        return ($post == null) ? App::abort(404) : $post;
-    } 
+    }
 
 }
