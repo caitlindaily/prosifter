@@ -54,7 +54,7 @@ class PostsController extends \BaseController {
 				$post->save();
 			}
 			Session::flash('successMessage', 'Post was created successfully!!!');
-			return Redirect::action('PostsController@index');
+			return Redirect::action('PostsController@show');
 		}
 
 	}
@@ -98,7 +98,7 @@ class PostsController extends \BaseController {
 				$post->save();
 			}
 			Session::flash('successMessage', 'Your post was updated!!!');
-			return Redirect::action('PostsController@index');
+			return Redirect::action('PostsController@show');
 		}
 	}
 

@@ -22,6 +22,7 @@ class HomeController extends BaseController {
 
 	}
 
+
 	public function showLogin() {
 		return View::make('login');
 	}
@@ -49,6 +50,7 @@ class HomeController extends BaseController {
 		Session::flash('successMessage', 'You have successfully logged out.');
 		return Redirect::action('PostsController@index');
 	}
+
 
 
 }
