@@ -24,6 +24,7 @@ Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
 
 // category routes
+
 Route::get('/category/{name}', 'CategoryController@findCategory');
 
 // provider routes
