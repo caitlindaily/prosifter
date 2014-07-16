@@ -160,7 +160,7 @@
 
 															<span class="mega-menu-sub-title">Sign In</span>
 
-															<form action="" id="" type="post">
+															{{ Form::open(array('action' => 'HomeController@doLogin')) }}
 																<div class="row">
 																	<div class="form-group">
 																		<div class="col-md-12">
@@ -188,7 +188,7 @@
 																		<input type="submit" value="Login" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
 																	</div>
 																</div>
-															</form>
+															{{ Form::close() }}
 
 															<p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up!</a></p>
 
