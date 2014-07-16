@@ -29,4 +29,13 @@ class HomeController extends BaseController {
 
 	}
 
+	// START NAVIGATION METHODS ///////////////
+	public function admin()
+	{
+		$users = new User();
+		$post
+		return View::make('index');
+
+	}
+
 }
