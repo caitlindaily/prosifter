@@ -2,30 +2,38 @@
 
 @section('content')
 
-@if (isset($post))
-    <h1 class="title">Edit Post</h1>
-    {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT', 'files' => true)) }}
-@else
-    <h1 class="title">New Blog Post</h1>
-    {{ Form::open(array('action'=>'PostsController@store', 'files' => true)) }}
-@endif
+    <div class="container">
+    @if(isset($post))
+      <h1>Edit Review</h1>
+       {{ Form::model($post, array('action' => array('PostsController@update', $post->slug), 'method' => 'PUT', 'files' => true)) }}
+    @else
+      <h1>Create Review</h1>
+       {{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
+    @endif
+    </div>
 
-<div class="form-group">
-    {{ Form::label('title', 'Title') }}<br>
-    {{ Form::text('title', null, array('class' => 'form-control')) }}<br>
-    {{ $errors->first('title', '<span class="help-block">:message</span><br>') }}
-</div>
-<div class="form-group">
-    {{ Form::label('body', 'Body') }}<br>
-    {{ Form::textarea('body', null, array('class' => 'form-control', 'size' => '10x10')) }}<br>
-    {{ $errors->first('body', '<span class="help-block">:message</span><br>') }}
-</div>
-<br>
-<div class="form-group">
-    {{ Form::file('image') }}
-    <p class="help-block">Upload an image. Images cannot be more than 500x500 pixels.</p>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    {{ Form::close() }}
-</div>
+<!--Error/Success Message-->
+    @if ($errors->has('title'))
+      {{ $errors->first('title', '<span class="help-block">:message</span>') }}
+    @endif  
 
+<!--Create/Edit Form-->
+<div class="container">
+    <div>
+      {{ Form::label('title', 'Title') }}<br>
+      {{ Form::text('title') }}
+    </div>  
+    <br>
+    <div>   
+      {{ Form::label('body', 'Post Body') }}<br>
+      {{ Form::textarea('body') }}
+    </div>  
+    <div>
+        {{ Form::label('image', 'Upload Image') }}
+        {{ Form::file('image') }}
+    </div>  
+    <br>
+      {{ Form::submit('Submit') }}
+      {{ Form::close() }}   
+</div>
 @stop
