@@ -11,9 +11,10 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UsersTableSeeder');
-        // $this->call('ProvidersTableSeeder');
+		$this->call('UsersTableSeeder');
+        $this->call('ProvidersTableSeeder');
         $this->call('PostTableSeeder');
+        $this->call('CategoriesTableSeeder');
     }
 }
 class UsersTableSeeder extends Seeder {
@@ -70,6 +71,7 @@ class PostTableSeeder extends Seeder {
             $provider = Provider::first();
 
             for ($i = 1; $i <= 10; $i++) {
+
                 $post = new Post();
 
                 $post->user_id = $user->id;
@@ -81,14 +83,23 @@ class PostTableSeeder extends Seeder {
     }
 }
 
+class CategoriesTableSeeder extends Seeder {
 
-//         // $table->increments('id');
-//         //     $table->integer('provider_id')->unsigned();
-//         //     $table->integer('user_id')->unsigned();
-//         //     $table->string('title', 100);
-//         //     $table->text('body');
-//         //     $table->foreign('user_id')->references('id')->on('users');
-//         //     $table->foreign('provider_id')->references('id')->on('providers');
-//         //     $table->timestamps();
-//         }
-//     }
+    public function run() {
+
+            DB::table('categories')->delete();
+
+            for ($i = 1; $i < 10; $i++) {
+
+                $categories = new Category();
+
+                $categories->name = "web developer $i";
+                $categories->save();
+
+            }
+
+    }
+}
+
+
+
