@@ -4,7 +4,7 @@ class Category extends BaseModel {
 
 	protected $table = 'categories';
 
-	public function provider()
+	public function providers()
 		{
 	  	  return $this->belongsToMany('Provider', 'provider_category');
 		}
