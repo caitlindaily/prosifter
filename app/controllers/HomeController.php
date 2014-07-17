@@ -44,14 +44,16 @@ class HomeController extends BaseController {
 		}
 	}
 
-	public function dologout() {
+	public function doLogout() {
 		Auth::logout();
 
 		Session::flash('successMessage', 'You have successfully logged out.');
 		return Redirect::action('PostsController@index');
 	}
 
-
+	public function showProfile() {
+		return View::make('profile');
+	}
 
 }
 
