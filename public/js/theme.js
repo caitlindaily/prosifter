@@ -195,7 +195,7 @@ Version: 		3.1.0
 				logoWidth = logo.attr("width"),
 				logoHeight = logo.attr("height"),
 				logoPaddingTop = parseInt(logo.attr("data-sticky-padding") ? logo.attr("data-sticky-padding") : "28"),
-				logoSmallWidth = parseInt(logo.attr("data-sticky-width") ? logo.attr("data-sticky-width") : "82"),
+				logoSmallWidth = parseInt(logo.attr("data-sticky-width") ? logo.attr("data-sticky-width") : "197"),
 				logoSmallHeight = parseInt(logo.attr("data-sticky-height") ? logo.attr("data-sticky-height") : "40");
 
 			if(menuAfterHeader) {

@@ -5,7 +5,7 @@
 
 
 			<div role="main" class="main">
-			<!-- CAROUSEL SLIDER START -->
+				<!-- CAROUSEL SLIDER START -->
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
@@ -134,7 +134,8 @@
 							</div>
 						</div>
 					</div>
-					<!-- END CATEGORIES SECTION -->
+				</div>
+				<!-- END CATEGORIES SECTION -->
 
 
 @stop
