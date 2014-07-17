@@ -27,7 +27,7 @@ class PostsController extends \BaseController {
 
 	public function create()
 	{
-		return View::make('Post.create-edit');
+		return View::make('post.createReview');
 	}
 
 	public function store()
