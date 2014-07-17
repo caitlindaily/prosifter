@@ -11,11 +11,10 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		$this->call('UsersTableSeeder');
-        // $this->call('PostTableSeeder');
-	}
+		// $this->call('UsersTableSeeder');
+        $this->call('ProvidersTableSeeder');
+    }
 }
-
 class UsersTableSeeder extends Seeder {
 
     public function run()
@@ -40,6 +39,26 @@ class UsersTableSeeder extends Seeder {
 
 }
 
+class ProvidersTableSeeder extends Seeder {
+
+    public function run() {
+
+        DB::table('providers')->delete();
+        $user = User::first();
+
+        for ($i = 1; $i < 10; $i++) {
+
+            $provider = new Provider();
+
+            $provider->company_name = "prosifter";
+            $provider->location = "San Antonio";
+            $provider->admin_user_id = $user->id;
+            $provider->slug = $provider->company_name . "-$i";
+
+            $provider->save();
+        }
+    }
+}
 // class PostTableSeeder extends Seeder {
 
 //     public function run()
