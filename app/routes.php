@@ -27,10 +27,10 @@ Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
 
 // category routes
-
+Route::resource('category', 'CategoryController');
 
 // provider routes
 Route::resource('providers', 'ProviderController');
-Route::get('/category/{name}', 'ProviderController@findProviderByCategory');
+
 
 Route::get('/profile', 'HomeController@showProfile');

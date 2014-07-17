@@ -4,23 +4,30 @@ class ProviderController extends BaseController {
 
     public function findProviderByCategory($categoryName) {
 
-	    $category = Category::with('providers')->where('name', '=', $categoryName)->first();
+	    $category = Category::where('name', '=', $categoryName)->first();
+	    $providers = $category->providers()->orderBy('created_at', 'desc')->paginate(2);
+
+	    $data = array(
+	    	'category' => $category,
+	    	'providers' => $providers,
+	    );
 	    // pass the $category on to the view
-	    return View::make('results')->with('category', $category);
+	    return View::make('provider.index')->with($data);
 
 	}
 
 	public function index()
-	{
-		$query = Provider::with('company_name');
+	{		
+		$query = Provider::with('user');
 
 		if (Input::has('search')) {
 
 			$search = Input::get('search');
 			$query->where('company_name', 'LIKE', "%$search%");
-		}
+		} 
 		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
-		return View::make('results')->with('posts', $posts);
+		return View::make('provider.show')->with('providers', $providers);
+		
 	}
 
 
@@ -66,14 +73,13 @@ class ProviderController extends BaseController {
 	public function show($providerName)
 	{
 		$provider = Provider::findOrFail($providerName);
-		return View::make('show')->with('provider', $provider);
+		return View::make('provider.show')->with('provider', $provider);
 	}
-
 
 	public function edit($id)
 	{
 		$provider = Provider::find($id);
-		return View::make('create-edit')->with('provider', $provider);
+		return View::make('editProfile')->with('provider', $provider);
 
 	}
 

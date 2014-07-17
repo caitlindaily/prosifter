@@ -31,6 +31,7 @@ class UsersController extends \BaseController {
 		if($password_confirmation == $user->password) 
 		{
 			$user->save();
+			Session::flash('successMessage', 'You have successfully created an account.');
 			return Redirect::action('PostsController@index');
 		}
 		else 

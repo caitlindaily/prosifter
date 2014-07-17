@@ -5,10 +5,10 @@
     <div class="container">
     @if(isset($post))
       <h1>Edit Review</h1>
-       {{ Form::model($post, array('action' => array('PostsController@update', $post->slug), 'method' => 'PUT', 'files' => true)) }}
+       {{ Form::model($post, array('action' => array('PostsController@update', $post->slug), 'method' => 'PUT')) }}
     @else
       <h1>Create Review</h1>
-       {{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
+       {{ Form::open(array('action' => 'PostsController@store')) }}
     @endif
     </div>
 
@@ -25,13 +25,10 @@
     </div>  
     <br>
     <div>   
-      {{ Form::label('body', 'Post Body') }}<br>
+      {{ Form::label('body', 'Review') }}<br>
       {{ Form::textarea('body') }}
-    </div>  
-    <div>
-        {{ Form::label('image', 'Upload Image') }}
-        {{ Form::file('image') }}
-    </div>  
+    </div>   
+    <p>Some sort of rating to click on goes here</p>
     <br>
       {{ Form::submit('Submit') }}
       {{ Form::close() }}   
