@@ -31,3 +31,10 @@ Route::resource('providers', 'ProviderController');
 Route::get('/category/{name}', 'ProviderController@findProviderByCategory');
 
 Route::get('/profile', 'HomeController@showProfile');
+
+// admin routes
+Route::get('/admin-index', 'AdminController@showAdmin');
+Route::get('/admin-roles', 'AdminController@showAdminRoles');
+Route::get('/admin-new-role', 'AdminController@showAdminNewRole');
+Route::get('/admin-users', 'AdminController@showAdminUsers');
+
