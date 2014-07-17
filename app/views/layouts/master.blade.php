@@ -107,7 +107,6 @@
 									<a href="#">
 										Home
 									</a>
-
 								</li>
 								<li>
 									<a class="dropdown-toggle" href="#">
@@ -160,7 +159,7 @@
 											<div class="mega-menu-content">
 												<div class="row">
 													<div class="col-md-12">
-
+														<!-- SIGN IN FORM -->
 														<div class="signin-form">
 															<span class="mega-menu-sub-title">Sign In</span>
 															{{ Form::open(array('action' => 'HomeController@doLogin')) }}
@@ -197,35 +196,142 @@
 															<p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up!</a></p>
 
 														</div>
-
+														<!-- SIGN UP/REGISTER FORM -->
 														<div class="signup-form">
-															<span class="mega-menu-sub-title">Create Account</span>
-
-															<form action="" id="" type="post">
-																<div class="row">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input type="text" value="" class="form-control input-lg" placeholder="e-mail">
+															<!-- REGISTER ACCORDION START -->
+														<div class="row">						
+															<div class="col-md-12">
+																<div class="panel-group secundary" id="accordion2">
+																	<div class="panel panel-default">
+																		<div class="panel-heading">
+																			<h4 class="panel-title" style="color: white">
+																				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2One">
+																					Create Standard Account
+																				</a>
+																			</h4>
+																		</div>
+																		<div id="collapse2One" class="accordion-body collapse in">
+																			<div class="panel-body">
+																				{{ Form::open(array('action' => 'UsersController@store', 'class'=>'form-signup')) }}
+																					<ul>
+																				        @foreach($errors->all() as $error)
+																				            <li>{{ $error }}</li>
+																				        @endforeach
+																				    </ul>
+																				    <div class="row">
+																						<div class="form-group">
+																							<div class="col-md-6">
+																								{{ Form::text('firstname', null, array('class'=>'form-control input-lg', 'placeholder'=>'first name')) }}
+																							</div>
+																							<div class="col-md-6">
+																								{{ Form::text('lastname', null, array('class'=>'form-control input-lg', 'placeholder'=>'last name')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-12">
+																								{{ Form::text('email', null, array('class'=>'form-control input-lg', 'placeholder'=>'email address')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-6">
+																								{{ Form::password('password', array('class'=>'form-control input-lg', 'placeholder'=>'password')) }}
+																							</div>
+																							<div class="col-md-6">
+																								{{ Form::password('password_confirmation', array('class'=>'form-control input-lg', 'placeholder'=>'confirm password')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="col-md-12">
+																							{{ Form::submit('Register', array('class'=>'btn btn-primary pull-right push-bottom', 'data-loading-text'=>'loading...'))}}
+																						</div>
+																					</div>
+																				{{ Form::close() }}	
+																			</div>
+																		</div>
+																	</div>
+																	<div class="panel panel-default">
+																		<div class="panel-heading">
+																			<h4 class="panel-title" style="color: white">
+																				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2Two">
+																					Create Provider Account
+																				</a>
+																			</h4>
+																		</div>
+																		<div id="collapse2Two" class="accordion-body collapse">
+																			<div class="panel-body">
+																				{{ Form::open(array('action' => 'UsersController@store', 'class'=>'form-signup')) }}
+																					<ul>
+																				        @foreach($errors->all() as $error)
+																				            <li>{{ $error }}</li>
+																				        @endforeach
+																				    </ul>
+																				    <div class="row">
+																						<div class="form-group">
+																							<div class="col-md-6">
+																								{{ Form::text('firstname', null, array('class'=>'form-control input-lg', 'placeholder'=>'first name')) }}
+																							</div>
+																							<div class="col-md-6">
+																								{{ Form::text('lastname', null, array('class'=>'form-control input-lg', 'placeholder'=>'last name')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-12">
+																								{{ Form::text('email', null, array('class'=>'form-control input-lg', 'placeholder'=>'email address')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-6">
+																								{{ Form::password('password', array('class'=>'form-control input-lg', 'placeholder'=>'password')) }}
+																							</div>
+																							<div class="col-md-6">
+																								{{ Form::password('password_confirmation', array('class'=>'form-control input-lg', 'placeholder'=>'confirm password')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-12">
+																								{{ Form::text('company_name', null, array('class'=>'form-control input-lg', 'placeholder'=>'company name')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-12">
+																								{{ Form::text('location', null, array('class'=>'form-control input-lg', 'placeholder'=>'city/location')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="form-group">
+																							<div class="col-md-12">
+																								{{ Form::text('phone', null, array('class'=>'form-control input-lg', 'placeholder'=>'phone number')) }}
+																							</div>
+																						</div>
+																					</div>
+																					<div class="row">
+																						<div class="col-md-12">
+																							{{ Form::submit('Register', array('class'=>'btn btn-primary pull-right push-bottom', 'data-loading-text'=>'loading...'))}}
+																						</div>
+																					</div>
+																				{{ Form::close() }}	
+																			</div>
 																		</div>
 																	</div>
 																</div>
-																<div class="row">
-																	<div class="form-group">
-																		<div class="col-md-6">
-																			<input type="password" value="" class="form-control input-lg" placeholder="password">
-																		</div>
-																		<div class="col-md-6">
-																			<input type="password" value="" class="form-control input-lg" placeholder="re-enter password">
-																		</div>
-																	</div>
-																</div>
-																<div class="row">
-																	<div class="col-md-12">
-																		<input type="submit" value="Create Account" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
-																	</div>
-																</div>
-															</form>
-
+															</div>
+														</div>
+														<!-- END REGISTER ACCORDION -->
+															
 															<p class="log-in-info">Already have an account? <a href="#" id="headerSignIn">Log In!</a></p>
 														</div>
 
