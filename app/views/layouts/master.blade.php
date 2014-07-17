@@ -129,7 +129,7 @@
 																<span class="mega-menu-sub-title">Categories</span>
 																<ul class="sub-menu">
 																	@foreach($categories as $category)
-																	<li>{{ link_to_action('CategoryController@findCategory', $category->name, [$category->name]) }}</li>
+																	<li>{{ link_to_action('ProviderController@findProviderByCategory', $category->name, [$category->name]) }}</li>
 
 																	@endforeach
 																</ul>

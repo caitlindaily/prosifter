@@ -15,7 +15,7 @@ Route::get('/', 'HomeController@index');
 
 View::share('categories', Category::all());
 
-//adding route for postsmcontroller.
+//adding route for postsController.
 Route::resource('posts', 'PostsController');
 
 // user routes
@@ -25,8 +25,9 @@ Route::get('/logout', 'HomeController@doLogout');
 
 // category routes
 
-Route::get('/category/{name}', 'CategoryController@findCategory');
 
 // provider routes
-Route::get('/provider/{name}', 'ProviderController@findProvider');
+Route::resource('providers', 'ProviderController');
+Route::get('/category/{name}', 'ProviderController@findProviderByCategory');
+
 Route::get('/profile', 'HomeController@showProfile');

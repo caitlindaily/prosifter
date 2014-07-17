@@ -19,6 +19,11 @@ class Post extends BaseModel {
         return $this->belongsTo('User');
     }
 
+    public function provider()
+    {
+        return $this->belongsTo('Provider');
+    }
+
     public function addUploadedImage($image) {
 
         //Creating path and directory for files to live--will live under public dir and then the name we give the next dir
