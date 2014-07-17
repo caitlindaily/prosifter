@@ -6,7 +6,7 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Porto - Responsive HTML5 Template 3.1.0</title>
+		<title>proSifter.com || trusted service, made easy!</title>
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -67,7 +67,7 @@
 				<div class="container">
 					<h1 class="logo">
 						<a href="/">
-							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="/img/logo.png">
+							<img alt="prosifter" src="/img/logo.png">
 						</a>
 					</h1>
 					<!-- SEARCH BAR -->
