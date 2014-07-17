@@ -130,7 +130,7 @@
 																<ul class="sub-menu">
 																	@foreach($categories as $category)
 																	<li>{{ link_to_action('CategoryController@findCategory', $category->name, [$category->name]) }}</li>
-																
+
 																	@endforeach
 																</ul>
 															</li>
@@ -142,9 +142,9 @@
 									</ul>
 								@if (Auth::check())
 								</li>
-								
-						            <li><h3 class="welcome-title">Welcome, <a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h3></li>  
-						            <li>{{ link_to_action('HomeController@logout', 'Log Out') }}</li>
+
+						            <li><h3 class="welcome-title">Welcome, <a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h3></li>
+						            <li>{{ link_to_action('HomeController@doLogout', 'Log Out') }}</li>
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 
@@ -193,7 +193,7 @@
 																	</div>
 																</div>
 															{{ Form::close() }}
-																
+
 															<p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up!</a></p>
 
 														</div>

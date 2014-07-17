@@ -29,3 +29,4 @@ Route::get('/category/{name}', 'CategoryController@findCategory');
 
 // provider routes
 Route::get('/provider/{name}', 'ProviderController@findProvider');
+Route::get('/profile', 'HomeController@showProfile');

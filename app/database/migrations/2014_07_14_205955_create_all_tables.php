@@ -20,6 +20,7 @@ class CreateAllTables extends Migration {
             $table->string('email')->unique();
             $table->string('password', 100);
             $table->string('role');
+            $table->string('remember_token', 100)->nullable();
             $table->timestamps();
 
         });
