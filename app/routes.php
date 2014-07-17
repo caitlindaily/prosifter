@@ -18,6 +18,9 @@ View::share('categories', Category::all());
 //adding route for postsController.
 Route::resource('posts', 'PostsController');
 
+//adding route for usersController.
+Route::resource('users', 'UsersController');
+
 // user routes
 Route::get('/login', 'HomeController@showLogin');
 Route::post('/login', 'HomeController@doLogin');
