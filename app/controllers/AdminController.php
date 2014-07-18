@@ -21,4 +21,12 @@ class AdminController extends BaseController {
     public function showAdminUsers() {
         return View::make('admin.users');
     }
+
+    public function showAdminNewUsers() {
+        return View::make('admin.new-user');
+    }
+
+    public function showAdminProfile() {
+        return View::make('admin.my-profile');
+    }
 }
