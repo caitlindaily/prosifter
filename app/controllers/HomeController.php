@@ -52,7 +52,7 @@ class HomeController extends BaseController {
 	}
 
 	public function showProfile() {
-		return View::make('profile');
+		return View::make('user.profile');
 	}
 
 }
