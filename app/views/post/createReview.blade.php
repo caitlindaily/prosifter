@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+<link href="/css/ratings.css" rel="stylesheet">
 @section('content')
 
     <div class="container">
@@ -28,9 +28,31 @@
       {{ Form::label('body', 'Review') }}<br>
       {{ Form::textarea('body') }}
     </div>   
-    <p>Some sort of rating to click on goes here</p>
+      <div class="rate-ex1-cnt">
+      <a href="#" data-rating="1" class="star rate-btn-1 rate-btn">1</a>
+      <a href="#" data-rating="2" class="star rate-btn-2 rate-btn">2</a>
+      <a href="#" data-rating="3" class="star rate-btn-3 rate-btn">3</a>
+      <a href="#" data-rating="4" class="star rate-btn-4 rate-btn">4</a>
+      <a href="#" data-rating="5" class="star rate-btn-5 rate-btn">5</a>
+    </div>
     <br>
       {{ Form::submit('Submit') }}
       {{ Form::close() }}   
+  
 </div>
+
+@stop
+
+@section('bottomscript')
+    <script type="text/javascript">
+        $(".star").click(function (e) {
+            var rating = $(this).data('rating');
+
+            $.post('/rating', { "rating": rating }, function() {
+                alert("I was posted! Yay!");
+            });
+
+            e.preventDefault();
+        });
+    </script>
 @stop

@@ -477,6 +477,6 @@
 
 		</script>
 		 -->
-
+		 @yield('bottomscript')
 	</body>
 </html>
