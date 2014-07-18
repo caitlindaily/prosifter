@@ -33,7 +33,7 @@ Version: 		3.1.0
 
 					setInterval( function() {
 						circleContainer.data().flipshow._navigate(circleContainer.find("div.fc-right span:first"), "right");
-					}, 3000);				
+					}, 6000);				
 				}
 			}
 
@@ -126,7 +126,7 @@ Version: 		3.1.0
 					boxCols: 8,                     // For box animations
 					boxRows: 4,                     // For box animations
 					animSpeed: 500,                 // Slide transition speed
-					pauseTime: 3000,                // How long each slide will show
+					pauseTime: 6000,                // How long each slide will show
 					startSlide: 0,                  // Set starting Slide (0 index)
 					directionNav: true,             // Next & Prev navigation
 					controlNav: true,               // 1,2,3... navigation

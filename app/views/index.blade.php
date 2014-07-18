@@ -13,8 +13,8 @@
 								<div class="slider-wrapper theme-default">
 									<!-- IMAGE DIMENSIONS 1140 X 430 -->
 									<div id="nivoSlider" class="nivoSlider">
-										<img src="/img/slides/slide-1.jpg" data-thumb="/img/slides/slide-1.jpg" alt="" />
-										<img src="/img/slides/slide-2.jpg" data-thumb="/img/slides/slide-2.jpg" alt="" />
+										<img src="/img/slides/slide-3.jpg" data-thumb="/img/slides/slide-3.jpg" alt="" />
+										<img src="/img/slides/slide-4.jpg" data-thumb="/img/slides/slide-4.jpg" alt="" />
 									</div>
 									<div id="htmlcaption" class="nivo-html-caption"></div>
 								</div>
@@ -54,7 +54,7 @@
 								<div class="col-md-4">
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-group"></i>
+											<i><img src="/img/icons/icon-beauty-16.png"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Beauty</h4>
@@ -63,7 +63,7 @@
 									</div>
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-file"></i>
+											<i class="icon icon-plus"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Health</h4>
@@ -72,7 +72,7 @@
 									</div>
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-google-plus"></i>
+											<i class="icon icon-home"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Home &amp Garden</h4>
@@ -80,10 +80,11 @@
 										</div>
 									</div>
 								</div>
+								<i class="fa fa-road"></i>
 								<div class="col-md-4">
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-adjust"></i>
+											<i class="icon icon-road"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Auto</h4>
@@ -92,7 +93,7 @@
 									</div>
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-film"></i>
+											<i><img src='/img/icons/icon-dog-16.png'></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Pets</h4>
@@ -101,7 +102,7 @@
 									</div>
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-check"></i>
+											<i class="icon icon-calendar"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Events</h4>
@@ -112,7 +113,7 @@
 								<div class="col-md-4">
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-bars"></i>
+											<i><img src='/img/icons/icon-bicycle-18.png'></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Recreation</h4>
@@ -123,7 +124,7 @@
 								<div class="col-md-4">
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-bars"></i>
+											<i><img src='/img/icons/icon-computer-18.png'></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Computer &amp Tech</h4>
