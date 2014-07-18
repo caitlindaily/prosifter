@@ -72,10 +72,10 @@
 					</h1>
 					<!-- SEARCH BAR -->
 					<div class="search">
-					{{ Form::open(array('id' => 'searchForm', 'method' => 'get')) }}
+					{{ Form::open(array('action' => 'ProviderController@show', 'method' => 'GET', 'class' => 'navbar-form navbar-left', 'role' => 'search')) }}
 						<!-- <form id="searchForm" action="page-search-results.html" method="get"> -->
 							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
+								<input type="text" class="form-control search" name="q" id="q" placeholder="Search company...">
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
 								</span>
@@ -104,7 +104,7 @@
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
 								<li>
-									<a href="#">
+									<a href="http://www.prosifter.com">
 										Home
 									</a>
 								</li>
@@ -114,7 +114,7 @@
 									</a>
 								</li>
 								<li class="dropdown mega-menu-item mega-menu-fullwidth">
-									<a class="dropdown-toggle" href="#">
+									<a class="dropdown-toggle" >
 										Categories
 										<i class="icon icon-angle-down"></i>
 									</a>
@@ -128,7 +128,7 @@
 																<span class="mega-menu-sub-title">Categories</span>
 																<ul class="sub-menu">
 																	@foreach($categories as $category)
-																	<li>{{ link_to_action('ProviderController@findProviderByCategory', $category->name, [$category->name]) }}</li>
+																	<li>{{ link_to_action('CategoryController@show', $category->name, [$category->name]) }}</li>
 
 																	@endforeach
 																</ul>
@@ -175,13 +175,16 @@
 										</li>
 									</ul>
 								</li>
+
+									<li><h4>  Welcome, <a style="font-size: 16px" href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h4></li>
+						            <li>{{ link_to_action('HomeController@doLogout', 'Log Out') }}</li>
+
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 
 								<li class="dropdown mega-menu-item mega-menu-signin signin" id="headerAccount">
 
-									<a class="dropdown-toggle" href="page-login.html">
-
+									<a class="dropdown-toggle">
 										<i class="icon icon-user"></i> Sign In
 										<i class="icon icon-angle-down"></i>
 									</a>
@@ -237,7 +240,7 @@
 																		<div class="panel-heading">
 																			<h4 class="panel-title" style="color: white">
 																				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2One">
-																					Create Standard Account
+																				Create Standard Account
 																				</a>
 																			</h4>
 																		</div>
@@ -510,6 +513,6 @@
 
 		</script>
 		 -->
-
+		 @yield('bottomscript')
 	</body>
 </html>

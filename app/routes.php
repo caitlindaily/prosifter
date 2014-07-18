@@ -12,6 +12,32 @@
 */
 //adding route to index page.
 Route::get('/', 'HomeController@index');
+//Route::post('/rating', 'HomeController@rate');
+
+Route::post('/rate-provider', function () {
+
+    $providerId = Input::get('provider_id');
+    $starRating = Input::get('star_rating');
+
+    // create rating for provider
+    $rating = new Rating();
+    $rating->user_id = 1;
+    $rating->post_id = 1;
+    $rating->provider_id = $providerId;
+    $rating->rating = $starRating;
+    $rating->save();
+
+    $error = false;
+    $message = "Rated!";
+
+    $result = array(
+        'error' => $error,
+        'message' => $message,
+    );
+
+    return Response::json($result);
+
+});
 
 View::share('categories', Category::all());
 
@@ -27,10 +53,10 @@ Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
 
 // category routes
-
+Route::resource('category', 'CategoryController');
 
 // provider routes
 Route::resource('providers', 'ProviderController');
-Route::get('/category/{name}', 'ProviderController@findProviderByCategory');
+
 
 Route::get('/profile', 'HomeController@showProfile');
