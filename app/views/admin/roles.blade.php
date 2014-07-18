@@ -65,7 +65,7 @@
 				</tr>
 				</tbody>
 			</table>
-			<a href="{{ action('AdminController@showAdminNewRole') }}" class="btn btn-success">New Role</a>
+			<a href="{{ action('AdminController@getNewRole') }}" class="btn btn-success">New Role</a>
 		  </div>
         </div>
       </div>

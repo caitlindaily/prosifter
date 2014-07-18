@@ -11,23 +11,25 @@
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>Name</th>
+						<th>First Name</th>
+						<th>Last Name</th>
 						<th>E-mail</th>
-						<th>Phone</th>
-						<th>City</th>
 						<th>Role</th>
 						<th>Status</th>
 						<th></th>
 					</tr>
 				</thead>
+
+				@foreach ($users as $user)
+					{{-- expr --}}
+
 				<tbody>
 				<tr class="list-users">
-					<td>1</td>
-					<td>Admin</td>
-					<td>travis@provider.com</td>
-					<td>xxx-xxx-xxxx</td>
-					<td>My City</td>
-					<td>Admin</td>
+					<td>{{ $user->id }}</td>
+					<td>{{ $user->first_name }}</td>
+					<td>{{ $user->last_name }}</td>
+					<td>{{ $user->email }}</td>
+					<td>{{ $user->role }}</td>
 					<td><span class="label label-success">Active</span></td>
 					<td>
 						<div class="btn-group">
@@ -44,7 +46,9 @@
 						</div>
 					</td>
 				</tr>
-				<tr class="list-users">
+
+				@endforeach
+				<!-- <tr class="list-users">
 					<td>2</td>
 					<td>Jose E. Jones</td>
 					<td>joseejones@provider.com</td>
@@ -250,7 +254,7 @@
 							</ul>
 						</div>
 					</td>
-				</tr>
+				</tr> -->
 				</tbody>
 			</table>
 			<div class="pagination">
@@ -265,7 +269,7 @@
 					<li><a href="#">Next</a></li>
 				</ul>
 			</div>
-			<a href="{{ action('AdminController@showAdminNewUsers') }}" class="btn btn-success">New User</a>
+			<a href="{{ action('AdminController@getNewUser') }}" class="btn btn-success">New User</a>
 		  </div>
         </div>
       </div>

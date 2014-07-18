@@ -33,9 +33,4 @@ Route::get('/category/{name}', 'ProviderController@findProviderByCategory');
 Route::get('/profile', 'HomeController@showProfile');
 
 // admin routes
-Route::get('/admin-index', 'AdminController@showAdmin');
-Route::get('/admin-roles', 'AdminController@showAdminRoles');
-Route::get('/admin-new-role', 'AdminController@showAdminNewRole');
-Route::get('/admin-users', 'AdminController@showAdminUsers');
-Route::get('/admin-new-user', 'AdminController@showAdminNewUsers');
-Route::get('/admin-my-profile', 'AdminController@showAdminProfile');
+Route::controller('/admin', 'AdminController');

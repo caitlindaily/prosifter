@@ -2,31 +2,77 @@
 
 class AdminController extends BaseController {
 
-    public function showAdmin() {
+    public function getIndex() {
 
-        return View::make('admin.admin-index');
+        return View::make('admin.index');
 
-        // return View::make('posts.index')->with('posts', $posts);
     }
 
-    public function showAdminRoles() {
+    // DELETE ME
+    public function getRoles() {
         return View::make('admin.roles');
 
     }
 
-    public function showAdminNewRole() {
+    // DELETE ME
+    public function getNewRole() {
         return View::make('admin.new-role');
     }
 
-    public function showAdminUsers() {
-        return View::make('admin.users');
+    public function getUsers() {
+        $users = User::all();
+        return View::make('admin.users')->with('users', $users);
     }
 
-    public function showAdminNewUsers() {
-        return View::make('admin.new-user');
+    public function getNewUser() {
+
+        $users = User::orderBy('created_at', 'desc')->paginate(4);
+
+
+        return View::make('admin.new-user')->with('users', $users);
+
     }
 
-    public function showAdminProfile() {
+    public function postUser() {
+        // save a new user
+        $validator = Validator::make(Input::all(), User::$rules);
+
+        if ($validator->fails()) {
+
+            Session::flash('errorMessage', 'Houston we have a problem!');
+            return Redirect::back()->withInput()->withErrors($validator);
+
+        } else {
+
+            $user = new User();
+            $user->first_name = Input::get('firstName');
+            $user->last_name = Input::get('lastName');
+            $user->email = Input::get('email');
+            $user->role = Input::get('role');
+            $user->password = Hash::make(Input::get('password'));
+
+
+            $user->save();
+
+            if (Input::hasFile('image') && Input::file('image')->isValid()) {
+                $post->addUploadedImage(Input::file('image'));
+                $post->save();
+            }
+
+            Session::flash('successMessage', 'Post added successfully!');
+            return Redirect::action('AdminController@getIndex');
+        }
+    }
+
+    public function putUsers($id) {
+        // update existing user
+    }
+
+    public function deleteUser($id) {
+        // delete a user
+    }
+
+    public function getProfile() {
         return View::make('admin.my-profile');
     }
 }

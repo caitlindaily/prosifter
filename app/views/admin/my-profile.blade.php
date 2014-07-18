@@ -10,7 +10,13 @@
 			<form class="form-horizontal">
 				<fieldset>
 					<div class="control-group">
-						<label class="control-label" for="name">Name</label>
+						<label class="control-label" for="first name">First Name</label>
+						<div class="controls">
+							<input type="text" class="input-xlarge" id="name" value="Admin" />
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="last name">Last Name</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge" id="name" value="Admin" />
 						</div>
@@ -22,15 +28,9 @@
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="pnohe">Phone</label>
+						<label class="control-label" for="password">Password</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge" id="phone" value="xxx-xxx-xxxx" />
-						</div>
-					</div>
-					<div class="control-group">
-						<label class="control-label" for="city">City</label>
-						<div class="controls">
-							<input type="text" class="input-xlarge" id="city" value="My City" />
 						</div>
 					</div>
 					<div class="control-group">
