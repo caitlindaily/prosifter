@@ -139,10 +139,46 @@
 											</div>
 										</li>
 									</ul>
-								@if (Auth::check())
+								
 								</li>
+								@if (Auth::check())
+								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
+									<a class="dropdown-toggle" href="page-login.html">
+										<i class="icon icon-user"></i> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
+										<i class="icon icon-angle-down"></i>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<div class="mega-menu-content">
+												<div class="row">
+													<div class="col-md-8">
+														<div class="user-avatar">
+															<div class="img-thumbnail">
+																<img src="img/clients/client-1.jpg" alt="">
+															</div>
+															<p><strong><a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a></strong>
+															<span>CEO & Founder - Okler</span></p>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<ul class="list-account-options">
+															<li>
+																<a href="#">My Account</a>
+															</li>
+															<li>
+																{{ link_to_action('HomeController@doLogout', 'Log Out') }}
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+
 									<li><h4>  Welcome, <a style="font-size: 16px" href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h4></li>
 						            <li>{{ link_to_action('HomeController@doLogout', 'Log Out') }}</li>
+
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 
