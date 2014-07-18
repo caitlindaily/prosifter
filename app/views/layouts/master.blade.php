@@ -175,10 +175,6 @@
 										</li>
 									</ul>
 								</li>
-
-									<li><h4>  Welcome, <a style="font-size: 16px" href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h4></li>
-						            <li>{{ link_to_action('HomeController@doLogout', 'Log Out') }}</li>
-
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 

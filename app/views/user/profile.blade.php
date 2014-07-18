@@ -17,7 +17,7 @@
 	<br>
 	<div>Location: {{ Auth::user()->provider->location }}</div>
 	<br>
-	{{ link_to_action('UsersController@edit', 'Edit Info', $user->id, array('class'=> 'btn btn-primary')) }}
+	{{ link_to_action('UsersController@edit', 'Edit Info', Auth::id(), array('class'=> 'btn btn-primary')) }}
 	@endif
 </div>
 
