@@ -138,9 +138,9 @@
 												</div>
 											</div>
 										</li>
-									</ul>
-								
+									</ul>							
 								</li>
+								<!-- IF SIGNED IN SHOW USER INFO -->
 								@if (Auth::check())
 								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
 									<a class="dropdown-toggle" href="page-login.html">
@@ -175,10 +175,7 @@
 										</li>
 									</ul>
 								</li>
-
-									<li><h4>  Welcome, <a style="font-size: 16px" href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h4></li>
-						            <li>{{ link_to_action('HomeController@doLogout', 'Log Out') }}</li>
-
+								<!-- IF NOT SIGNED IN SHOW SIGN IN FORM -->
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 
