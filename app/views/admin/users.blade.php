@@ -34,22 +34,21 @@
 						<div class="btn-group">
 							<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">Actions <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+								<li><a href="{{ action('AdminController@getUser', $user->id) }}"><i class="icon-pencil"></i> Edit</a></li>
 								<li><a href="#" class="deleteUser" data-userid="{{ $user->id }}">
 									<i class="icon-trash"></i> Delete
 								</a></li>
-								<li><a href="#"><i class="icon-user"></i> Details</a></li>
 								<li class="nav-header">Permissions</li>
-								<li><a href="#"><i class="icon-lock"></i> Make <strong>Admin</strong></a></li>
-								<li><a href="#"><i class="icon-lock"></i> Make <strong>Moderator</strong></a></li>
-								<li><a href="#"><i class="icon-lock"></i> Make <strong>User</strong></a></li>
+								<li><a href="{{ action('AdminController@getAdminRole', $user->id) }}"><i class="icon-lock"></i> Make <strong>Admin</strong></a></li>
+
+								<li><a href="{{ action('AdminController@getUserRole', $user->id) }}"><i class="icon-lock"></i> Make <strong>User</strong></a></li>
 							</ul>
 						</div>
 					</td>
 				</tr>
 
-
 				@endforeach
+
 
 				</tbody>
 			</table>

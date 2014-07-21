@@ -20,7 +20,7 @@ class AdminController extends BaseController {
     }
 
     public function getUsers() {
-        $users = User::paginate(5);
+        $users = User::orderBy('created_at', 'desc')->paginate(5);
 
 
         return View::make('admin.users')->with('users', $users);
@@ -66,8 +66,28 @@ class AdminController extends BaseController {
         }
     }
 
-    public function putUsers($id) {
-        // update existing user
+    public function getUser($id) {
+        $user = User::find($id);
+        return View::make('admin.edit-users')->with('user', $user);
+    }
+
+    public function putUser($id) {
+        $user = new User();
+
+        if ($id != null) {
+            $user = User::findOrFail($id);
+        }
+
+        $user = User::find($id);
+        $user->first_name = Input::get('first_name');
+        $user->last_name = Input::get('last_name');
+        $user->email = Input::get('email');
+        $user->role = Input::get('role');
+
+        $user->save();
+
+        return Redirect::action('AdminController@getUsers');
+
     }
 
     public function deleteUser($id) {
@@ -82,4 +102,20 @@ class AdminController extends BaseController {
     public function getProfile() {
         return View::make('admin.my-profile');
     }
+
+    public function getAdminRole($id) {
+        $user = User::find($id);
+
+            $user->role = 'admin';
+            $user->save();
+            return Redirect::action('AdminController@getUsers');
+        }
+
+    public function getUserRole($id) {
+        $user = User::find($id);
+
+            $user->role = 'user';
+            $user->save();
+            return Redirect::action('AdminController@getUsers');
+        }
 }
