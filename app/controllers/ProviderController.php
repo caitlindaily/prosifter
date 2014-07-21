@@ -1,32 +1,21 @@
 <?php
 
 class ProviderController extends BaseController {
-
-    public function findProviderByCategory($categoryName) {
-
-	    $category = Category::where('name', '=', $categoryName)->first();
-	    $providers = $category->providers()->orderBy('created_at', 'desc')->paginate(2);
-
-	    $data = array(
-	    	'category' => $category,
-	    	'providers' => $providers,
-	    );
-	    // pass the $category on to the view
-	    return View::make('provider.index')->with($data);
-
-	}
+	
 
 	public function index()
 	{		
-		$query = Provider::with('user');
+		$providers = Provider::paginate(5);
 
 		if (Input::has('search')) {
 
 			$search = Input::get('search');
-			$query->where('company_name', 'LIKE', "%$search%");
-		} 
-		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
-		return View::make('provider.show')->with('providers', $providers);
+			$providers = Provider::where('company_name', 'LIKE', "%$search%")
+				->orderBy('created_at', 'desc')
+				->paginate(5);
+		}
+		
+		return View::make('search.show')->with('providers', $providers);
 		
 	}
 
@@ -34,6 +23,11 @@ class ProviderController extends BaseController {
 	public function create()
 	{
 		return View::make('create-edit');
+	}
+
+	public function createReview()
+	{
+		return View::make('post.createReview');
 	}
 
 	public function store()
@@ -69,6 +63,36 @@ class ProviderController extends BaseController {
 
 	}
 
+	public function saveReview($id) {
+
+		$validator = Validator::make(Input::all(), Post::$rules);
+
+		if ($validator->fails()) {
+
+			Session::flash('errorMessage', 'There were errors with your submission.');
+			return Redirect::back()->withInput()->withErrors($validator);
+
+		} else {
+
+			$post = new Post();
+			$post->user_id = Auth::user()->id;
+			$post->provider_id = $id;
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			// $post->slug = Input::get('title');
+			$post->save();
+
+
+
+		if (Input::hasFile('image') && Input::file('image')->isValid())
+			{
+				$post->addUploadedImage(Input::file('image'));
+				$post->save();
+			}
+			Session::flash('successMessage', 'Post was created successfully!!!');
+			return Redirect::action('PostsController@index');
+			}
+	}
 
 	public function show($providerName)
 	{

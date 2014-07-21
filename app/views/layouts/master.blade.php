@@ -76,10 +76,10 @@
 					</h1>
 					<!-- SEARCH BAR -->
 					<div class="search">
-					{{ Form::open(array('action' => 'ProviderController@show', 'method' => 'GET', 'class' => 'navbar-form navbar-left', 'role' => 'search')) }}
-						<!-- <form id="searchForm" action="page-search-results.html" method="get"> -->
+					{{ Form::open(array('action' => 'ProviderController@index', 'method' => 'GET', 'role' => 'search')) }}
+						<form id="searchForm" action="page-search-results.html" method="get">
 							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search company...">
+								{{ Form::text('search', Input::get('search'), array('class' => 'form-control', 'placeholder' => 'Search By Company')) }}
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
 								</span>
