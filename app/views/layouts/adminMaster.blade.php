@@ -10,8 +10,8 @@
     <meta name="author" content="travis">
 
     <link href="/css/admin-bootstrap.css" rel="stylesheet">
-    <link href="/css/admin-site.css" rel="stylesheet">
     <link href="/css/admin-bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/admin-site.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -29,7 +29,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">ProSifter Administration</a>
+          <a class="brand" href="{{ action('HomeController@index') }}">ProSifter Administration</a>
           <div class="btn-group pull-right">
             <a class="btn" href="{{ action('AdminController@getProfile') }}"><i class="icon-user"></i> Admin</a>
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -90,7 +90,6 @@
 
 
 
-@yield('bottomscript')
 
 <footer class="well">
         &copy; Strass
@@ -116,5 +115,7 @@
         }
     });
     </script>
+
+    @yield('bottomscript')
   </body>
 </html>

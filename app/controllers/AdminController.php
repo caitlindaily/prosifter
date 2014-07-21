@@ -20,13 +20,15 @@ class AdminController extends BaseController {
     }
 
     public function getUsers() {
-        $users = User::all();
+        $users = User::paginate(5);
+
+
         return View::make('admin.users')->with('users', $users);
     }
 
     public function getNewUser() {
 
-        $users = User::orderBy('created_at', 'desc')->paginate(4);
+        $users = User::orderBy('created_at', 'desc')->paginate(5);
 
 
         return View::make('admin.new-user')->with('users', $users);
@@ -69,7 +71,12 @@ class AdminController extends BaseController {
     }
 
     public function deleteUser($id) {
-        // delete a user
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        Session::flash('successMessage', 'User deleted successfully');
+
+        return Redirect::action('AdminController@getUsers');
     }
 
     public function getProfile() {
