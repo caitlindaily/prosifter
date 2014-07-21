@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-  <h1>{{{ $provider->company_name }}}<span>(rating display goes here)</span></h1>
+  <h1>{{{ $provider->company_name }}}<span style="color: {{$provider->getColor()}}">  {{{ $provider->avgRating() }}}</span></h1>
   <h4>{{{ $provider->location }}}</h4>
 
 @if(Auth::check())
