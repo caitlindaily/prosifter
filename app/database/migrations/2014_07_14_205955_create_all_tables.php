@@ -38,6 +38,13 @@ class CreateAllTables extends Migration {
             $table->increments('id');
             $table->string('company_name');
             $table->integer('admin_user_id')->unsigned();
+            $table->string('address', 100);
+            $table->string('city', 50);
+            $table->string('state', 2);
+            $table->string('zip_code', 5);
+            $table->string('phone', 14);
+            $table->string('website', 100);
+            $table->text('description');
             $table->string('location');
             $table->string('slug');
             $table->foreign('admin_user_id')->references('id')->on('users');
