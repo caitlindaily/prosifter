@@ -107,6 +107,15 @@
 					<div class="container">
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
+								@if (Auth::check())
+									@if (Auth::user()->role == 'admin')
+								<li>
+									<a href="{{ action('AdminController@getIndex') }}">
+										Admin
+									</a>
+								</li>
+								@endif
+								@endif
 								<li>
 									<a href="http://www.prosifter.com">
 										Home
@@ -142,13 +151,9 @@
 												</div>
 											</div>
 										</li>
-									</ul>							
+									</ul>
 								</li>
-								<li>
-									<a href="http://www.prosifter.com">
-										Admin
-									</a>
-								</li>
+
 								<!-- IF SIGNED IN SHOW USER INFO -->
 								@if (Auth::check())
 								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
@@ -240,7 +245,7 @@
 														<!-- SIGN UP/REGISTER FORM -->
 														<div class="signup-form">
 															<!-- REGISTER ACCORDION START -->
-														<div class="row">						
+														<div class="row">
 															<div class="col-md-12">
 																<div class="panel-group secundary" id="accordion2">
 																	<div class="panel panel-default">
@@ -291,7 +296,7 @@
 																							{{ Form::submit('Register', array('class'=>'btn btn-primary pull-right push-bottom', 'data-loading-text'=>'loading...'))}}
 																						</div>
 																					</div>
-																				{{ Form::close() }}	
+																				{{ Form::close() }}
 																			</div>
 																		</div>
 																	</div>
@@ -364,7 +369,7 @@
 																							{{ Form::submit('Register', array('class'=>'btn btn-primary pull-right push-bottom', 'data-loading-text'=>'loading...'))}}
 																						</div>
 																					</div>
-																				{{ Form::close() }}	
+																				{{ Form::close() }}
 																			</div>
 																		</div>
 																	</div>
@@ -372,7 +377,7 @@
 															</div>
 														</div>
 														<!-- END REGISTER ACCORDION -->
-															
+
 															<p class="log-in-info">Already have an account? <a href="#" id="headerSignIn">Log In!</a></p>
 														</div>
 
