@@ -57,7 +57,9 @@ Route::resource('category', 'CategoryController');
 
 // provider routes
 Route::resource('providers', 'ProviderController');
-
+Route::post('/providers/{id}/save-review', 'ProviderController@saveReview');
+Route::get('/providers/{id}/create-review', 'ProviderController@createReview');
+Route::get('/{search}', 'ProviderController@index');
 
 Route::get('/profile', 'HomeController@showProfile');
 

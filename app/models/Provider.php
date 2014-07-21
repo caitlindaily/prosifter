@@ -51,6 +51,7 @@ class Provider extends BaseModel {
 			$color = '#F00';
 		}
 	    return $color; 
-	}    	
+	}
+
 }
 
