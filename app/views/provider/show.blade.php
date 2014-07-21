@@ -7,7 +7,7 @@
   <h4>{{{ $provider->location }}}</h4>
 
 @if(Auth::check())
-   {{ link_to_action('PostsController@create', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary')) }}
+   {{ link_to_action('ProviderController@createReview', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary')) }}
    <br>
    <br>
 </div>
