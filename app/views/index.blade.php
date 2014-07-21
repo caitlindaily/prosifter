@@ -102,7 +102,7 @@
 									</div>
 									<div class="feature-box">
 										<div class="feature-box-icon">
-											<i class="icon icon-calendar"></i>
+											<i class="icon icon-calendar-o"></i>
 										</div>
 										<div class="feature-box-info">
 											<h4 class="shorter">Events</h4>
