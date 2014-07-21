@@ -58,10 +58,13 @@
 													<input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
 													<div id="ajax-message"></div>
 												</div>
-												<p>
-												{{ $provider->location }}
-												</p>
-
+												<div><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}">{{{ $provider->phone }}}</a></div>
+												<strong><div>{{{ucwords($provider->address)}}}</div>
+												<div>{{{ucwords($provider->city)}}}, {{{strtoupper($provider->state)}}} {{{$provider->zip_code}}}</div>
+												<div><a href="http://maps.google.com/maps?q={{{ str_replace('+', ' ', ($provider->address)) }}},+{{{ str_replace('+', ' ', ($provider->city)) }}},+{{{str_replace('+', ' ', ($provider->state))}}},+{{{ $provider->zip }}}">View Map</a></div>
+												<div><a href='http://{{{$provider->website}}}'>Visit Website</a></div>
+												</strong>
+												<p>{{{$provider->description}}}</p>
 											</div>
 										</div>
 
@@ -71,9 +74,7 @@
 											<div class="post-meta">
 												<span><i class="icon icon-calendar"></i> January 10, 2013 </span>
 												<span><i class="icon icon-user"></i> By <a href="#">John Doe</a> </span>
-												<span><i class="icon icon-tag"></i> <a href="#">Duis</a>, <a href="#">News</a> </span>
-												<span><i class="icon icon-comments"></i> <a href="#">12 Reviews</a></span>
-												<a href="blog-post.html" class="btn btn-xs btn-primary pull-right">Read more...</a>
+												{{ link_to_action('ProviderController@show', 'Read more...', $provider->id, array('class' => 'btn btn-xs btn-primary pull-right')) }}
 											</div>
 										</div>
 									</div>
