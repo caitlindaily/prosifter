@@ -60,3 +60,6 @@ Route::resource('providers', 'ProviderController');
 
 
 Route::get('/profile', 'HomeController@showProfile');
+
+// admin routes
+Route::controller('/admin', 'AdminController');

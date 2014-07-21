@@ -47,6 +47,10 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/css/custom.css">
 
+		<!-- Rating Stylesheet -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/star-rating/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+
 		<!-- Head Libs -->
 		<script src="/vendor/modernizr.js"></script>
 
@@ -140,6 +144,11 @@
 										</li>
 									</ul>							
 								</li>
+								<li>
+									<a href="http://www.prosifter.com">
+										Admin
+									</a>
+								</li>
 								<!-- IF SIGNED IN SHOW USER INFO -->
 								@if (Auth::check())
 								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
@@ -176,6 +185,7 @@
 									</ul>
 								</li>
 								<!-- IF NOT SIGNED IN SHOW SIGN IN FORM -->
+
             					@else
 								<!-- SIGN IN TAB & FORM START -->
 
