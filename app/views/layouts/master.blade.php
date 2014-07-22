@@ -134,10 +134,11 @@
 									</a>
 								</li>
 								<li>
-									<a class="dropdown-toggle" href="#">
+									<a class="dropdown-toggle" href="{{ action('HomeController@meetTheTeam') }}">
 										Meet The Team
 									</a>
 								</li>
+
 								@if (Auth::check())
 									@if (Auth::user()->role == 'admin')
 								<li>
