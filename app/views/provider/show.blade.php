@@ -63,11 +63,11 @@
                       <span><i class="icon icon-comments"></i> <a href="#prov-review">Reviews</a></span>
                     </div>
 
-                    <div><h4><i class='icon icon-phone'></i><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}"> {{{ $provider->phone }}}</a></h4></div>
+                    <div><h4><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}">{{{ $provider->phone }}}</i></a></h4></div>
                     <strong><div>{{{ucwords($provider->address)}}}</div>
                     <div>{{{ucwords($provider->city)}}}, {{{strtoupper($provider->state)}}} {{{$provider->zip_code}}}</div>
-                    <div><i class='icon icon-map-marker'></i><a href="http://maps.google.com/maps?q={{{ str_replace('+', ' ', ($provider->address)) }}},+{{{ str_replace('+', ' ', ($provider->city)) }}},+{{{str_replace('+', ' ', ($provider->state))}}},+{{{ $provider->zip }}}"> View Map</a></div>
-                    <div><i class='icon icon-globe'></i><a href='http://{{{$provider->website}}}'> Visit Website</a></div>
+                    <div><a href="http://maps.google.com/maps?q={{{ str_replace('+', ' ', ($provider->address)) }}},+{{{ str_replace('+', ' ', ($provider->city)) }}},+{{{str_replace('+', ' ', ($provider->state))}}},+{{{ $provider->zip }}}">View Map <i class='icon icon-map-marker'></i></a></div>
+                    <div><a href='http://{{{$provider->website}}}'>Visit Website <i class='icon icon-globe'></i></a></div>
                     </strong>
 
                     <p>{{{ $provider->description }}}</p>
