@@ -92,9 +92,9 @@
 							</li>
 						</ul>
 					</nav>
-					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+					<!-- <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
 						<i class="icon icon-bars"></i>
-					</button>
+					</button> -->
 				</div>
 				<div class="navbar-collapse nav-main-collapse collapse">
 					<div class="container">
