@@ -95,6 +95,16 @@
 						<i class="icon icon-bars"></i>
 					</button> -->
 				</div>
+					@if (Session::has('successMessage'))
+				    <div class="alert alert-success" id="fade_message">
+                    	{{{ Session::get('successMessage') }}}
+		            </div>
+		            @endif
+		            @if (Session::has('errorMessage'))
+		                <div class="alert alert-danger" id="fade_message">
+		                    {{{ Session::get('errorMessage') }}}
+		                </div>
+		            @endif
 				<div class="navbar-collapse nav-main-collapse collapse">
 					<div class="container">
 						<nav class="nav-main mega-menu">
@@ -307,12 +317,13 @@
 																		</div>
 																		<div id="collapse2Two" class="accordion-body collapse">
 																			<div class="panel-body">
-																				{{ Form::open(array('action' => 'UsersController@store', 'class'=>'form-signup')) }}
+																				{{ Form::open(array('action' => 'ProviderController@store', 'class'=>'form-signup')) }}
 																					<ul>
 																				        @foreach($errors->all() as $error)
 																				            <li>{{ $error }}</li>
 																				        @endforeach
 																				    </ul>
+
 																				    <div class="row">
 																						<div class="form-group">
 																							<div class="col-md-6">
@@ -366,6 +377,7 @@
 																							{{ Form::submit('Register', array('class'=>'btn btn-primary pull-right push-bottom', 'data-loading-text'=>'loading...'))}}
 																						</div>
 																					</div>
+
 																				{{ Form::close() }}
 																			</div>
 																		</div>
@@ -373,6 +385,7 @@
 																</div>
 															</div>
 														</div>
+
 														<!-- END REGISTER ACCORDION -->
 
 															<p class="log-in-info">Already have an account? <a href="#" id="headerSignIn">Log In!</a></p>
@@ -523,5 +536,8 @@
 		</script>
 		 -->
 		 @yield('bottomscript')
+		 <script>
+		 $('#fade_message').delay(2000).fadeOut(1000);
+		 </script>
 	</body>
 </html>

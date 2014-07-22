@@ -16,7 +16,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
-	public static $rules = array();
+	public static $rules = array(
+		'password' => 'confirmed'
+	);
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -33,5 +35,10 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	public function provider()
 	{
 		return $this->hasOne('Provider', 'admin_user_id');
+	}
+
+	public function setPasswordAttribute($value)
+	{
+		return $this->attributes['password'] = Hash::make($value);
 	}
 }

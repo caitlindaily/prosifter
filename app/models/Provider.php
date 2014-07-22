@@ -4,8 +4,8 @@ class Provider extends BaseModel {
 
 	protected $table = 'providers';
 
-	 static public $rules = [
-    	'rating' => 'required|max:100',
+	static public $rules = [
+    	//'rating' => 'required|max:100',
     ];
 
 	public function category()
@@ -23,12 +23,12 @@ class Provider extends BaseModel {
 		return $this->hasMany('Post');
 	}
 
-	public function ratings() 
+	public function ratings()
 	{
 		return $this->hasMany('Rating');
 	}
 
-	public function avgRating() 
+	public function avgRating()
 	{
 		//Grabs ratings for provider and takes the average, then formats the decimal places by 1 place.
 		$avgRating =  $this->ratings()->avg('rating');
@@ -37,7 +37,7 @@ class Provider extends BaseModel {
 	}
 
 	//Depending upon the rating, a different color will be displayed
-	public function getColor()	
+	public function getColor()
 	{
 		$rating = $this->avgRating();
 
@@ -50,7 +50,7 @@ class Provider extends BaseModel {
 		} else {
 			$color = '#F00';
 		}
-	    return $color; 
+	    return $color;
 	}
 
 }

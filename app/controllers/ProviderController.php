@@ -1,10 +1,10 @@
 <?php
 
 class ProviderController extends BaseController {
-	
+
 
 	public function index()
-	{		
+	{
 		$providers = Provider::paginate(5);
 
 		if (Input::has('search')) {
@@ -14,9 +14,9 @@ class ProviderController extends BaseController {
 				->orderBy('created_at', 'desc')
 				->paginate(5);
 		}
-		
+
 		return View::make('search.show')->with('providers', $providers);
-		
+
 	}
 
 
@@ -34,19 +34,20 @@ class ProviderController extends BaseController {
 	public function store()
 	{
 		//Create instance of validator and use make. Want to validate all input with the rules from Post.
-		$validator = Validator::make(Input::all());
+		$validator = Validator::make(Input::all(), Provider::$rules);
 
 		if ($validator->fails()) {
 
 			Session::flash('errorMessage', 'There were errors with your submission.');
+			Log::info('validation error');
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
 
 			$provider = new Provider();
 			$provider->admin_user_id = Auth::user()->id;
-			$provider->provider_id = 1;
-			$provier->company_name = Input::get('company_name');
+			// $provider->provider_id = 1;
+			$provider->company_name = Input::get('company_name');
 			$provider->location = Input::get('location');
 			$provider->slug = Input::get('company_name');
 			$provider->save();
@@ -74,7 +75,7 @@ class ProviderController extends BaseController {
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
-			
+
 			$post = new Post();
 			$post->user_id = Auth::user()->id;
 			$post->provider_id = $id;
