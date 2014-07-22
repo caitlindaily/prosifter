@@ -21,26 +21,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<div class="home-intro home-intro-compact">
-								<div class="row">
-									<div class="col-md-8">
-										<p>
-											Lorem <em>Ipsum.</em>
-											<span>Lorem.</span>
-										</p>
-									</div>
-									<div class="col-md-4">
-										<div class="get-started">
-											<a href="#" class="btn btn-lg btn-primary">Insert Here!</a>
-											<div class="learn-more">or <a href="index.html">learn more.</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 				<!-- END CAROUSEL SLIDER -->
 
