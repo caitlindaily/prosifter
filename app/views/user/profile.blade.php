@@ -12,13 +12,14 @@
 	<div>Email: {{ Auth::user()->email }}</div>
 	<br>
 
+	@if (Auth::user()->role == 'prov')
 	<h5>Provider Info</h5>
-	<div>Name: {{ Auth::user()->provider->company_name }}</div>
+	<div>Name: {{-- Auth::user()->provider->company_name --}}</div>
 	<br>
-	<div>Location: {{ Auth::user()->provider->location }}</div>
-	<br>
+	<div>Location: {{-- Auth::user()->provider->location --}}</div>
+	<br> 
 	{{ link_to_action('UsersController@edit', 'Edit Info', Auth::id(), array('class'=> 'btn btn-primary')) }}
-	
+	@endif
 </div>
 
 @stop

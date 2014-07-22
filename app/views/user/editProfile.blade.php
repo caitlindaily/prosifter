@@ -2,9 +2,9 @@
 
 <!--Edit Info-->
 <div class="container">
-	@if(isset($user))
+	
 	  <h1>Edit Info</h1>
-	   {{ Form::model($user, array('action' => array('UsersController@update'), 'method' => 'PUT', 'files' => true)) }}
+	   {{-- Form::model($user->id, array('action' => array('UsersController@update'), 'method' => 'PUT', 'files' => true)) --}}
 	
 
 <div class="container">
@@ -24,6 +24,6 @@
     </div>  
       {{ Form::submit('Submit') }}
       {{ Form::close() }}   
-	@endif
+
 	</div>
 @stop	

@@ -44,16 +44,16 @@ class UsersController extends \BaseController {
 	}
 
 
-	public function show($id)
+	public function show()
 	{
-		$user = User::find($id);
-		return View::make('user.profile')->with('user', $user);	
+		return View::make('user.profile');	
 	}
 
 
 	public function edit($id)
 	{
-
+		$user = User::find($id);
+		return View::make('user.editProfile');
 	}
 
 
