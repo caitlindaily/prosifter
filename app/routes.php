@@ -12,6 +12,7 @@
 */
 //adding route to index page.
 Route::get('/', 'HomeController@index');
+Route::get('/team', 'HomeController@meetTheTeam');
 //Route::post('/rating', 'HomeController@rate');
 
 Route::post('/rate-provider', function () {

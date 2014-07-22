@@ -20,6 +20,11 @@ class HomeController extends BaseController {
 
 	}
 
+	public function meetTheTeam() {
+
+		return View::make('team');
+	}
+
 
 	public function showLogin() {
 		return View::make('index');
