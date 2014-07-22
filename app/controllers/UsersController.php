@@ -53,13 +53,19 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		$user = User::find($id);
-		return View::make('user.editProfile');
+		return View::make('user.editProfile')->with('user', $user);
 	}
 
 
 	public function update($id)
 	{
+		$user = User::findOrFail($id);
 
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
+		$user->email = Input::get('email');
+		$user->save();
+		return Redirect::action('HomeController@showProfile');
 	}
 
 
