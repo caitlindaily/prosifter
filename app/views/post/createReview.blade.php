@@ -3,13 +3,8 @@
 @section('content')
 
     <div class="container">
-    @if(isset($post))
-      <h1>Edit Review</h1>
-       {{ Form::model($post, array('action' => array('PostsController@update', $post->slug), 'method' => 'PUT')) }}
-    @else
       <h1>Create Review</h1>
-       {{ Form::open(array('action' => 'ProviderController@saveReview')) }}
-    @endif
+       {{ Form::open(array('action' => array('ProviderController@saveReview', $provider->id))) }}
     </div>
 
 <!--Error/Success Message-->

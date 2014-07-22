@@ -25,9 +25,10 @@ class ProviderController extends BaseController {
 		return View::make('create-edit');
 	}
 
-	public function createReview()
+	public function createReview($id)
 	{
-		return View::make('post.createReview');
+		$provider = Provider::findOrFail($id);
+		return View::make('post.createReview')->with('provider', $provider);
 	}
 
 	public function store()
@@ -73,13 +74,12 @@ class ProviderController extends BaseController {
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
-
+			
 			$post = new Post();
 			$post->user_id = Auth::user()->id;
 			$post->provider_id = $id;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-			// $post->slug = Input::get('title');
 			$post->save();
 
 

@@ -47,7 +47,7 @@ class PostsController extends \BaseController {
 			$post->provider_id = 1;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
-			// $post->slug = Input::get('title');
+			$post->slug = Input::get('title');
 			$post->save();
 
 
