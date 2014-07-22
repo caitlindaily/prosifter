@@ -44,22 +44,28 @@ class UsersController extends \BaseController {
 	}
 
 
-	public function show($id)
+	public function show()
 	{
-		$user = User::find($id);
-		return View::make('user.profile')->with('user', $user);	
+		return View::make('user.profile');	
 	}
 
 
 	public function edit($id)
 	{
-
+		$user = User::find($id);
+		return View::make('user.editProfile')->with('user', $user);
 	}
 
 
 	public function update($id)
 	{
+		$user = User::findOrFail($id);
 
+		$user->first_name = Input::get('first_name');
+		$user->last_name = Input::get('last_name');
+		$user->email = Input::get('email');
+		$user->save();
+		return Redirect::action('HomeController@showProfile');
 	}
 
 

@@ -1,13 +1,12 @@
+@extends('layouts.master')
+
 @section('content')
 
-<!--Edit Info-->
 <div class="container">
-	@if(isset($user))
+   <!--Edit Form-->
 	  <h1>Edit Info</h1>
-	   {{ Form::model($user, array('action' => array('UsersController@update'), 'method' => 'PUT', 'files' => true)) }}
+	   {{ Form::model($user, array('action' => array('UsersController@update', $user->id), 'method' => 'PUT', 'files' => true)) }}
 	
-
-<div class="container">
     <div>
       {{ Form::label('first_name', 'First Name') }}<br>
       {{ Form::text('first_name') }}
@@ -15,15 +14,17 @@
     <br>
     <div>   
       {{ Form::label('last_name', 'Last Name') }}<br>
-      {{ Form::text('last name') }}
+      {{ Form::text('last_name') }}
     </div>   
     <br>
     <div>   
       {{ Form::label('email', 'Email') }}<br>
       {{ Form::email('email') }}
-    </div>  
+    </div> 
+    <br>
+    <div>
       {{ Form::submit('Submit') }}
       {{ Form::close() }}   
-	@endif
-	</div>
+    </div>  
+</div>
 @stop	

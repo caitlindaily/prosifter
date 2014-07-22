@@ -165,7 +165,7 @@
 																<img src="img/clients/client-1.jpg" alt="">
 															</div>
 															<p><strong>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong>
-															<span>CEO & Founder - Okler</span></p>
+															<span>CEO &amp; Founder - Okler</span></p>
 														</div>
 													</div>
 													<div class="col-md-4">
