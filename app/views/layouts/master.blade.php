@@ -69,15 +69,14 @@
 					</h1>
 					<!-- SEARCH BAR -->
 					<div class="search">
-					{{ Form::open(array('action' => 'ProviderController@index', 'method' => 'GET', 'role' => 'search')) }}
-						<form id="searchForm" action="page-search-results.html" method="get">
+					{{ Form::open(array('action' => 'ProviderController@index', 'method' => 'GET', 'role' => 'search', 'id' => 'searchForm')) }}
 							<div class="input-group">
 								{{ Form::text('search', Input::get('search'), array('class' => 'form-control', 'placeholder' => 'Search By Company')) }}
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
 								</span>
 							</div>
-						{{ Form::close() }}
+					{{ Form::close() }}
 					</div>
 					<!-- SOCIAL PAGE LINKS -->
 					<ul class="social-icons">
@@ -457,7 +456,7 @@
 						<div class="row">
 							<div class="col-md-1">
 								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="/img/logo-footer.png">
+									<img alt="proSifter logo" class="img-responsive" src="/img/logo-footer.png">
 								</a>
 							</div>
 							<div class="col-md-7">
