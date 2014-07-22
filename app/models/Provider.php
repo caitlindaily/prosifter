@@ -42,7 +42,7 @@ class Provider extends BaseModel {
 		$rating = $this->avgRating();
 
 		if ($rating > 4.0) {
-		    $color = '#0F0';
+		    $color = '#2ACC48';
 		} elseif ($rating > 3.0 && $rating < 4.0) {
 			$color = '#00F';
 		} elseif ($rating == 0) {

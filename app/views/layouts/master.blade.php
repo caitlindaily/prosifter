@@ -163,14 +163,14 @@
 															<div class="img-thumbnail">
 																<img src="img/clients/client-1.jpg" alt="">
 															</div>
-															<p><strong><a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a></strong>
+															<p><strong>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong>
 															<span>CEO & Founder - Okler</span></p>
 														</div>
 													</div>
 													<div class="col-md-4">
 														<ul class="list-account-options">
 															<li>
-																<a href="#">My Account</a>
+																<a href="{{ action('HomeController@showProfile') }}">My Account</a>
 															</li>
 															<li>
 																{{ link_to_action('HomeController@doLogout', 'Log Out') }}

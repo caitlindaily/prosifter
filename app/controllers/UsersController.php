@@ -44,9 +44,10 @@ class UsersController extends \BaseController {
 	}
 
 
-	public function show($slug)
+	public function show($id)
 	{
-
+		$user = User::find($id);
+		return View::make('user.profile')->with('user', $user);	
 	}
 
 
