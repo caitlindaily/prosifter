@@ -54,13 +54,6 @@
 		<!-- Head Libs -->
 		<script src="/vendor/modernizr.js"></script>
 
-		<!--[if IE]>
-			<link rel="stylesheet" href="css/ie.css">
-		<![endif]-->
-
-		<!--[if lte IE 8]>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->
 
 	</head>
 	<body>
@@ -107,23 +100,9 @@
 					<div class="container">
 						<nav class="nav-main mega-menu">
 							<ul class="nav nav-pills nav-main" id="mainMenu">
-								@if (Auth::check())
-									@if (Auth::user()->role == 'admin')
 								<li>
-									<a href="{{ action('AdminController@getIndex') }}">
-										Admin
-									</a>
-								</li>
-								@endif
-								@endif
-								<li>
-									<a href="http://www.prosifter.com">
+									<a href="/">
 										Home
-									</a>
-								</li>
-								<li>
-									<a class="dropdown-toggle" href="#">
-										About Us
 									</a>
 								</li>
 								<li class="dropdown mega-menu-item mega-menu-fullwidth">
@@ -153,7 +132,25 @@
 										</li>
 									</ul>
 								</li>
-
+								<li>
+									<a class="dropdown-toggle" href="#">
+										About
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-toggle" href="#">
+										Meet The Team
+									</a>
+								</li>
+								@if (Auth::check())
+									@if (Auth::user()->role == 'admin')
+								<li>
+									<a href="{{ action('AdminController@getIndex') }}">
+										Admin
+									</a>
+								</li>
+									@endif
+								@endif
 								<!-- IF SIGNED IN SHOW USER INFO -->
 								@if (Auth::check())
 								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
