@@ -52,7 +52,7 @@
 
 											<div class="post-content">
 												<div>
-													<h2>{{ link_to_action('ProviderController@show', $provider->company_name, $provider->id) }}<span style="color: {{$provider->getColor()}}">  {{{ $provider->avgRating() }}}</span></h2>
+													<h2>{{ link_to_action('ProviderController@show', $provider->company_name, $provider->id) }}<k style='margin-left: 50px;'><span style="color: {{$provider->getColor()}}">  {{{ $provider->avgRating() }}}</span></k></h2>
 												</div>
 
 												<div>
@@ -91,24 +91,13 @@
 						<div class="col-md-3">
 							<aside class="sidebar">
 
-								<form>
-									<div class="input-group input-group-lg">
-										<input class="form-control" placeholder="Search..." name="s" id="s" type="text">
-										<span class="input-group-btn">
-											<button type="submit" class="btn btn-primary btn-lg"><i class="icon icon-search"></i></button>
-										</span>
-									</div>
-								</form>
-
 								<hr />
 
 								<h4>Categories</h4>
 								<ul class="nav nav-list primary push-bottom">
-									<li><a href="#">Design</a></li>
-									<li><a href="#">Photos</a></li>
-									<li><a href="#">Videos</a></li>
-									<li><a href="#">Lifestyle</a></li>
-									<li><a href="#">Technology</a></li>
+									@foreach($categories as $category)
+									<li>{{ link_to_action('CategoryController@show', $category->name, [$category->name]) }}</li>
+									@endforeach
 								</ul>
 
 								<div class="tabs">
