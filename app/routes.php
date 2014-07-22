@@ -52,6 +52,7 @@ Route::resource('users', 'UsersController');
 Route::get('/login', 'HomeController@showLogin');
 Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@doLogout');
+Route::get('/profile', 'HomeController@showProfile');
 
 // category routes
 Route::resource('category', 'CategoryController');
@@ -61,8 +62,6 @@ Route::resource('providers', 'ProviderController');
 Route::post('/providers/{id}/save-review', 'ProviderController@saveReview');
 Route::get('/providers/{id}/create-review', 'ProviderController@createReview');
 Route::get('/{search}', 'ProviderController@index');
-
-Route::get('/profile', 'HomeController@showProfile');
 
 // admin routes
 Route::controller('/admin', 'AdminController');
