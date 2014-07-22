@@ -21,7 +21,7 @@
 				<tr class="list-roles">
 					<td>1</td>
 					<td>Admin</td>
-					<td>Aliquam erat volutpat. Vivamus molestie tempor pellentesque. Praesent lobortis, neque.</td>
+					<td>Can manage, add, delete users, providers.</td>
 					<td>admin</td>
 					<td>
 						<div class="btn-group">
@@ -35,9 +35,9 @@
 				</tr>
 				<tr class="list-roles">
 					<td>2</td>
-					<td>Moderator</td>
-					<td>Phasellus scelerisque, quam ac bibendum pulvinar, erat ligula pulvinar risus, in ultricies...</td>
-					<td>mod</td>
+					<td>Provider</td>
+					<td>Is a provider as well as a user. Can edit business information.</td>
+					<td>prov</td>
 					<td>
 						<div class="btn-group">
 							<a class="btn btn-mini dropdown-toggle" data-toggle="dropdown" href="#">Actions <span class="caret"></span></a>
@@ -51,7 +51,7 @@
 				<tr class="list-roles">
 					<td>3</td>
 					<td>User</td>
-					<td>Donec cursus, velit eu fermentum ullamcorper, libero est.</td>
+					<td>Can only rate providers and leave reviews.</td>
 					<td>user</td>
 					<td>
 						<div class="btn-group">

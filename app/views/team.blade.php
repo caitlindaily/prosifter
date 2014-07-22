@@ -4,12 +4,6 @@
 @section('content')
 
 
-
-
-    <body>
-
-
-
             <div role="main" class="main">
 
                 <section class="page-top">
@@ -17,14 +11,14 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <ul class="breadcrumb">
-                                    <li><a href="#">Home</a></li>
-                                    <li class="active">The Team</li>
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active">Meet The Team</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <h2>The Team</h2>
+                                <h2>Team proSifter</h2>
                             </div>
                         </div>
                     </div>
@@ -37,15 +31,17 @@
                             <h2 class="short word-rotator-title">Who we are <strong class="inverted" data-appear-animation="bounceIn">
                                     <span class="word-rotate">
                                         <span class="word-rotate-items">
-                                            <span>success.</span>
                                             <span>Web Developers.</span>
-                                            <span>Project Management.</span>
+                                            <span>Your Dreams.</span>
+                                            <span><img src="/img/codeup-small.png"></span>
+                                            <span>success.</span>
                                         </span>
                                     </span>
                                 </strong>
                             </h2>
                             <p class="featured lead">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla non <span class="alternative-font">metus.</span> pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut eu risus enim, ut pulvinar lectus. Sed hendrerit nibh.
+                                <i class="icon icon-quote-left"></i> Hello, we want to <span class='alternative-font'>thank you</span> for coming out to demo day. Creating this project has been challanging and very rewarding. Our team would like to say thanks to Codeup for giving us valuable skills that will further our careers in Web Development.<br>
+                                <span>- Greg McCabe, Caitlin Daily &amp Michael Jaime.</span>
                             </p>
                         </div>
                     </div>
@@ -53,51 +49,8 @@
                     <hr class="tall" />
                 </div>
 
-                <!--  -->
 
-
-
-                <section class="video valign-video" style="background-image: url(img/slides/dark-cover.jpg);">
-                    <div class="container">
-                        <div class="row center">
-                            <div class="col-md-6">
-
-                                <div class="row">
-                                    <div class="owl-carousel" data-plugin-options='{"items": 1}'>
-                                        <div>
-                                            <blockquote>
-                                                <p><i class="icon icon-quote-left"></i> Hello, We want to thank you for coming out to demo day. creating this project has been challanging and very rewarding. Our team would like to say thanks to Codeup for giving us valuable skills that will further our careers in Web development.</p>
-                                                <span>- Greg McCabe, Caitlin Daily and Michael Jaime.</span>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p><i class="icon icon-quote-left"></i> Just want to say Okler RULES. Provide great tech service for each template and allows me to become more knowledgeable as a designer.</p>
-                                                <span>- Edward Chelton</span>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p><i class="icon icon-quote-left"></i> Just came here to say a big thank you to the author of this template. It works amazingly well, the documentation is top-notch, and the theme looks beautiful.</p>
-                                                <span>- Bruce Ericson</span>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="video-overlay"></div>
-                    <video autoplay loop poster="img/slides/dark-cover.jpg" data-plugin-options='{"videoWidth": "100%", "videoHeight": "100%", "enableAutosize": "true"}'>
-                        <source src="video/dark.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                        <source src="video/dark.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                    </video>
-                </section>
-
-
-                    <hr class="tall" />
+                    
                 </div>
 
                 <div class="container">
