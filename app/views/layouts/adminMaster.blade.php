@@ -19,7 +19,7 @@
 
 
   <body>
-
+    <!--NavBar-->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -29,41 +29,15 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="{{ action('AdminController@getIndex') }}">proSifter Admin Panel</a>
-          <div class="btn-group pull-right">
-            <a class="btn" href="{{ action('AdminController@getProfile') }}"><i class="icon-user"></i> Admin</a>
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="{{ action('AdminController@getProfile') }}">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </div>
           <div class="nav-collapse">
             <ul class="nav">
-              <li><a href="{{ action('AdminController@getIndex') }}">Home</a></li>
-              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="{{ action('AdminController@getNewUser') }}">New User</a></li>
-                    <li class="divider"></li>
-                    <li><a href="{{ action('AdminController@getUsers') }}">Manage Users</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Roles <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="{{ action('AdminController@getNewRole') }}">New Role</a></li>
-                    <li class="divider"></li>
-                    <li><a href="{{ action('AdminController@getRoles') }}">Manage Roles</a></li>
-                </ul>
-              </li>
               <li><a href="/">Back to Website</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
+    <!--Left Panel-->
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
@@ -81,7 +55,7 @@
         </div>
  @yield('content')
 
-
+    <!--Footer Content-->
     <div class="footer-copyright">
           <div class="container">
             <div class="row">
