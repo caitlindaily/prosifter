@@ -2,48 +2,56 @@
 
 class AdminController extends BaseController {
 
-    public function getIndex() {
+    public function __construct()
+    {
+       // call base controller constructor
+       parent::__construct();
 
+       // run auth filter before all methods on this controller 
+       $this->beforeFilter('auth.basic');
+    }
+
+
+    public function getIndex() 
+    {
         return View::make('admin.index');
-
     }
 
-    // DELETE ME
-    public function getRoles() {
+    
+    public function getRoles() 
+    {
         return View::make('admin.roles');
-
     }
 
-    // DELETE ME
-    public function getNewRole() {
+    
+    public function getNewRole() 
+    {
         return View::make('admin.new-role');
     }
 
-    public function getUsers() {
+    public function getUsers() 
+    {
         $users = User::orderBy('created_at', 'desc')->paginate(5);
-
-
         return View::make('admin.users')->with('users', $users);
     }
 
-    public function getNewUser() {
+    public function getNewUser() 
+    {
 
         $users = User::orderBy('created_at', 'desc')->paginate(5);
-
-
         return View::make('admin.new-user')->with('users', $users);
-
     }
 
-    public function postUser() {
+    public function postUser() 
+    {
         // save a new user
         $validator = Validator::make(Input::all(), User::$rules);
 
-        if ($validator->fails()) {
-
+        if ($validator->fails()) 
+        {
             Session::flash('errorMessage', 'Houston we have a problem!');
             return Redirect::back()->withInput()->withErrors($validator);
-
+        
         } else {
 
             $user = new User();
@@ -56,7 +64,8 @@ class AdminController extends BaseController {
 
             $user->save();
 
-            if (Input::hasFile('image') && Input::file('image')->isValid()) {
+            if (Input::hasFile('image') && Input::file('image')->isValid()) 
+            {
                 $post->addUploadedImage(Input::file('image'));
                 $post->save();
             }
@@ -66,15 +75,18 @@ class AdminController extends BaseController {
         }
     }
 
-    public function getUser($id) {
+    public function getUser($id) 
+    {
         $user = User::find($id);
         return View::make('admin.edit-users')->with('user', $user);
     }
 
-    public function putUser($id) {
+    public function putUser($id) 
+    {
         $user = new User();
 
-        if ($id != null) {
+        if ($id != null) 
+        {
             $user = User::findOrFail($id);
         }
 
@@ -90,32 +102,36 @@ class AdminController extends BaseController {
 
     }
 
-    public function deleteUser($id) {
+    public function deleteUser($id) 
+    {
         $user = User::findOrFail($id);
         $user->delete();
 
         Session::flash('successMessage', 'User deleted successfully');
-
         return Redirect::action('AdminController@getUsers');
     }
 
-    public function getProfile() {
+
+    public function getProfile() 
+    {
         return View::make('admin.my-profile');
     }
 
-    public function getAdminRole($id) {
+    public function getAdminRole($id) 
+    {
         $user = User::find($id);
 
-            $user->role = 'admin';
-            $user->save();
-            return Redirect::action('AdminController@getUsers');
-        }
+        $user->role = 'admin';
+        $user->save();
+        return Redirect::action('AdminController@getUsers');
+    }
 
-    public function getUserRole($id) {
+    public function getUserRole($id) 
+    {
         $user = User::find($id);
 
-            $user->role = 'user';
-            $user->save();
-            return Redirect::action('AdminController@getUsers');
-        }
+        $user->role = 'user';
+        $user->save();
+        return Redirect::action('AdminController@getUsers');
+    }
 }

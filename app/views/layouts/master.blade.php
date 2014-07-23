@@ -87,7 +87,7 @@
 					<nav>
 						<ul class="nav nav-pills nav-top">
 							<li>
-								<a href="contact-us.html"><i class="icon icon-angle-right"></i>Contact Us</a>
+								<a href="#contact-us"><i class="icon icon-angle-right"></i>Contact Us</a>
 							</li>
 						</ul>
 					</nav>
@@ -407,7 +407,7 @@
 
 @yield('content')
 
-
+			<span id="contact-us"></span>
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
