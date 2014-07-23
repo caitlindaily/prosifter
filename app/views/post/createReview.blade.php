@@ -10,22 +10,22 @@
 <!--Error/Success Message-->
     @if ($errors->has('title'))
       {{ $errors->first('title', '<span class="help-block">:message</span>') }}
-    @endif  
+    @endif
 
 <!--Create/Edit Form-->
 <div class="container">
     <div>
       {{ Form::label('title', 'Title') }}<br>
       {{ Form::text('title') }}
-    </div>  
+    </div>
     <br>
-    <div>   
+    <div>
       {{ Form::label('body', 'Review') }}<br>
       {{ Form::textarea('body') }}
-    </div>   
+    </div>
     <br>
       {{ Form::submit('Submit') }}
-      {{ Form::close() }}   
+      {{ Form::close() }}
 </div>
 @stop
 

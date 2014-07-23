@@ -91,13 +91,13 @@ class ProviderController extends BaseController {
 				$post->save();
 			}
 			Session::flash('successMessage', 'Post was created successfully!!!');
-			return Redirect::action('PostsController@index');
+			return Redirect::action('ProviderController@show', $id);
 			}
 	}
 
-	public function show($providerName)
+	public function show($id)
 	{
-		$provider = Provider::findOrFail($providerName);
+		$provider = Provider::findOrFail($id);
 		return View::make('provider.show')->with('provider', $provider);
 	}
 
