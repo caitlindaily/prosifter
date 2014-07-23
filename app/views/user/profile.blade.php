@@ -1,26 +1,74 @@
 @extends('layouts.master')
 
+
 @section('content')
 
-<div class="container">
-	<h3>Profile View</h3>
+			<div role="main" class="main">
 
-	
-	<h5>Personal Info</h5>
-	<div>Name: {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</div>
-	<br>
-	<div>Email: {{ Auth::user()->email }}</div>
-	<br>
+				<section class="page-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a href="#">Home</a></li>
+									<li class="active">profile</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h2>My Account</h2>
+							</div>
+						</div>
+					</div>
+				</section>
 
-	@if (Auth::user()->role == 'prov')
-	<h5>Company Info</h5>
-	<div>Name: {{ Auth::user()->provider->company_name }}</div>
-	<br>
-	<div>Location: {{ Auth::user()->provider->location }}</div>
-	<br> 
-	@endif
+				<div class="container">
 
-	{{ link_to_action('UsersController@edit', 'Edit Info', Auth::id()) }} 
-</div>
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="owl-carousel " data-plugin-options='{"items": 1}'>
+								<div>
+									<div class="thumbnail">
+										<img alt="" height="300" class="img-responsive" src="/img/team/team-3.jpg">
+									</div>
+								</div>
+								<div>
+									<div class="thumbnail">
+										<img alt="" height="300" class="img-responsive" src="/img/team/team-9.jpg">
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-8">
+
+							<h2 class="shorter">{{ Auth::user()->first_name }} <strong>{{ Auth::user()->last_name }}</strong></h2>
+							<h4>{{ Auth::user()->email }}</h4>
+							<span>{{ link_to_action('UsersController@edit', 'Edit Info', Auth::id(), array('class' => 'btn btn-primary pull-right push-bottom')) }} </span>
+							@if (Auth::user()->role == 'prov')
+							<h2>{{ Auth::user()->provider->company_name }}</h2>
+
+							<ul class="list icons list-unstyled">
+								<li><i class="icon icon-road" style="margin-right: 30px;"></i> {{ Auth::user()->provider->address }}</li>
+								<li><i class="icon icon-home" style="margin-right: 30px;"></i> {{ Auth::user()->provider->city }}</li>
+								<li><i class="icon icon-flag" style="margin-right: 30px;"></i> {{ Auth::user()->provider->state }}</li>
+								<li><i class="icon icon-crosshairs" style="margin-right: 30px;"></i> {{ Auth::user()->provider->zip_code }}</li>
+								<li><i class="icon icon-phone" style="margin-right: 30px;"></i> {{ Auth::user()->provider->phone }}</li>
+								<li><i class="icon icon-globe" style="margin-right: 30px;"></i> {{ Auth::user()->provider->website }}</li>
+							</ul>
+							<h5>Description</h5>
+							<p>{{ Auth::user()->provider->description }}</p>
+							@endif
+						</div>
+					</div>
+
+					<hr class="tall" />
+
+				</div>
+
+			</div>
 
 @stop

@@ -6,9 +6,9 @@ class ProviderCategorySeeder extends Seeder {
     {
         DB::table('provider_category')->delete();
 
-        for ($i = 1; $i < 20; $i++) {
+        for ($i = 1; $i <= 50; $i++) {
         	DB::table('provider_category')->insert(
-    			array('provider_id' => $i, 'category_id' => rand(1,10))
+    			array('provider_id' => $i, 'category_id' => rand(1,8))
 	    	);
         }
 

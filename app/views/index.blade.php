@@ -55,7 +55,7 @@
 											<i class="icon icon-home"></i>
 										</div>
 										<div class="feature-box-info">
-											<h4 class="shorter"><a href='/category/Home20%&20%Garden/'>Home &amp Garden</a></h4>
+											<h4 class="shorter"><a href='/category/Home & Garden/'>Home &amp Garden</a></h4>
 											<p class="tall">Handymen, Carpenters, Electricians &amp More.</p>
 										</div>
 									</div>
@@ -107,7 +107,7 @@
 											<i><img src='/img/icons/icon-computer-18.png'></i>
 										</div>
 										<div class="feature-box-info">
-											<h4 class="shorter"><a href='/category/Computer%20&20%Tech/'>Computer &amp Tech</a></h4>
+											<h4 class="shorter"><a href='/category/Computer & Tech/'>Computer &amp Tech</a></h4>
 											<p class="tall">Computer Repair, Developer, Designer, Specialist &amp More.</p>
 										</div>
 									</div>

@@ -6,12 +6,23 @@ class CategoriesTableSeeder extends Seeder {
 
             DB::table('categories')->delete();
 
-            for ($i = 1; $i < 10; $i++) {
+            for ($i = 0; $i < 8; $i++) {
 
                 $categories = new Category();
 
-                $categories->name = "Category $i";
-                $categories->save();
+                $stuff = [
+		    		'Beauty',
+		    		'Health',
+		    		'Home & Garden',
+		    		'Auto',
+		    		'Pets',
+		    		'Events',
+		    		'Recreation',
+		    		'Computer & Tech'
+		    	];
+
+                $categories->name = $stuff[$i];
+	            $categories->save();
 
             }
 

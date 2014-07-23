@@ -111,37 +111,16 @@
 										Home
 									</a>
 								</li>
-								<li class="dropdown mega-menu-item mega-menu-fullwidth">
-									<a class="dropdown-toggle" >
+								<li class="dropdown">
+									<a class="dropdown-toggle" href="#">
 										Categories
 										<i class="icon icon-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu">
-										<li>
-											<div class="mega-menu-content">
-												<div class="row">
-													<div class="col-md-3">
-														<ul class="sub-menu">
-															<li>
-																<span class="mega-menu-sub-title">Categories</span>
-																<ul class="sub-menu">
-																	@foreach($categories as $category)
-																	<li>{{ link_to_action('CategoryController@show', $category->name, [$category->name]) }}</li>
-
-																	@endforeach
-																</ul>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
+										@foreach($categories as $category)
+										<li>{{ link_to_action('CategoryController@show', $category->name, [$category->name]) }}</li>
+										@endforeach
 									</ul>
-								</li>
-								<li>
-									<a class="dropdown-toggle" href="#">
-										About
-									</a>
 								</li>
 								<li>
 									<a class="dropdown-toggle" href="{{ action('HomeController@meetTheTeam') }}">
@@ -161,7 +140,7 @@
 								<!-- IF SIGNED IN SHOW USER INFO -->
 								@if (Auth::check())
 								<li class="dropdown mega-menu-item mega-menu-signin signin logged" id="headerAccount">
-									<a class="dropdown-toggle" href="page-login.html">
+									<a class="dropdown-toggle" href="{{ action('HomeController@showProfile') }}">
 										<i class="icon icon-user"></i> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
 										<i class="icon icon-angle-down"></i>
 									</a>
@@ -172,10 +151,10 @@
 													<div class="col-md-8">
 														<div class="user-avatar">
 															<div class="img-thumbnail">
-																<img src="img/clients/client-1.jpg" alt="">
+																<img src="/img/clients/client-1.jpg" alt="">
 															</div>
 															<p><strong>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong>
-															<span>CEO &amp; Founder - Okler</span></p>
+															<span>{{ Auth::user()->email }}</span></p>
 														</div>
 													</div>
 													<div class="col-md-4">
