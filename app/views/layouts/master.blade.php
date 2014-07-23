@@ -50,6 +50,7 @@
 		<!-- Rating Stylesheet -->
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/star-rating/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+		<link href="/css/ratings.css" rel="stylesheet">
 
 		<!-- Head Libs -->
 		<script src="/vendor/modernizr.js"></script>

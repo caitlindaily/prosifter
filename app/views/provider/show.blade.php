@@ -20,6 +20,7 @@
               <div class="col-md-12">
                 <h2>{{{ strtoupper($provider->company_name) }}}<k style='margin-left: 75px;, '><span style="color: {{$provider->getColor()}}">  {{{ $provider->avgRating() }}}</span></k></h2>
               </div>
+
             </div>
           </div>
         </section>
@@ -57,6 +58,10 @@
                     @if(Auth::check())
                       {{ link_to_action('ProviderController@createReview', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
                     @endif
+                    <div>
+                          <input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
+                          <div id="ajax-message"></div>
+                        </div>
                     <div class="post-meta">
                       <span><i class="icon icon-user"></i> By <a href="#">John Doe</a> </span>
                       <!-- HOW, REPLACE THIS LINE WITH CATEGORY -->
@@ -138,6 +143,38 @@
         </div>
 
       </div>
+
+
+@stop
+@section('bottomscript')
+<script src="/star-rating/js/star-rating.min.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function () {
+        $(".rating").rating();
+    });
+
+    $('.rating').on('rating.change', function(event, value) {
+      console.log('I clicked stars!');
+      console.log(value);
+
+      var providerId = $(this).data('id');
+      var starRating = value;
+
+       $.ajax({
+          url: "/rate-provider",
+          type: "POST",
+          data: {
+            'provider_id': providerId,
+            'star_rating': starRating
+          },
+          dataType: "json",
+          success: function (data) {
+              $('#ajax-message').html(data.message);
+          }
+      });
+    
+    });
+</script>
 
 
 @stop
