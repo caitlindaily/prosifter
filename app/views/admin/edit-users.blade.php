@@ -5,7 +5,7 @@
         <div class="span9">
           <div class="row-fluid">
             <div class="page-header">
-                <h1>New User <small>User registration</small></h1>
+                <h1>Edit User</h1>
             </div>
 
                 {{ Form::model($user, array('action' => array('AdminController@putUser', $user->id), 'method' => 'PUT', 'files' => true)) }}
@@ -28,13 +28,6 @@
                             {{ Form::text('email', null, array('class' => 'nput-xlarge')) }}
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="password">Password</label>
-                        <div class="controls">
-                            <input type="password" class="input-xlarge" id="password" name="password" />
-                        </div>
-                    </div>
-
                     <div class="control-group">
                         <label class="control-label" for="role">Role</label>
                         <div class="controls">
