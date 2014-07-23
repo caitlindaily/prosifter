@@ -55,7 +55,7 @@
 
                     <h2>{{ link_to_action('ProviderController@show', $provider->company_name, $provider->id) }}</h2>
                     @if(Auth::check())
-                      {{ link_to_action('PostsController@create', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
+                      {{ link_to_action('ProviderController@createReview', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
                     @endif
                     <div class="post-meta">
                       <span><i class="icon icon-user"></i> By <a href="#">John Doe</a> </span>
@@ -90,7 +90,7 @@
                     <div class="post-block post-comments clearfix">
                       <h3><i class="icon icon-comments"></i><a id="prov-review">Reviews</a></h3>
                       @if(Auth::check())
-                        {{ link_to_action('PostsController@create', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
+                        {{ link_to_action('ProviderController@createReview', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
                       @endif
                       <ul class="comments">
                         <li>
