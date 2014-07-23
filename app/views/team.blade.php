@@ -31,16 +31,17 @@
                             <h2 class="short word-rotator-title">Who we are <strong class="inverted" data-appear-animation="bounceIn">
                                     <span class="word-rotate">
                                         <span class="word-rotate-items">
+                                            <span><img src="/img/prosifter-small.png"></span>
                                             <span>Web Developers.</span>
                                             <span>Your Dreams.</span>
-                                            <span><img src="/img/codeup-small.png"></span>
                                             <span>success.</span>
+                                            <span><img src="/img/codeup-small.png"></span>
                                         </span>
                                     </span>
                                 </strong>
                             </h2>
                             <p class="featured lead">
-                                <i class="icon icon-quote-left"></i> Hello, we want to <span class='alternative-font'>thank you</span> for coming out to demo day. Creating this project has been challanging and very rewarding. Our team would like to say thanks to Codeup for giving us valuable skills that will further our careers in Web Development.<br>
+                                <i class="icon icon-quote-left"></i> Hello, we want to <span class='alternative-font'>thank you</span> for coming out to demo day. Creating this project has been challenging and very rewarding. Our team would like to say thanks to Codeup for giving us valuable skills that will further our careers in Web Development.<br>
                                 <span>- Greg McCabe, Caitlin Daily &amp Michael Jaime.</span>
                             </p>
                         </div>
@@ -49,9 +50,6 @@
                     <hr class="tall" />
                 </div>
 
-
-                    
-                </div>
 
                 <div class="container">
                     <div class="row" id="team">
@@ -72,6 +70,7 @@
                                             <span class="thumb-info-caption">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
                                                 <span class="thumb-info-social-icons">
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
@@ -91,6 +90,7 @@
                                             <span class="thumb-info-caption">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
                                                 <span class="thumb-info-social-icons">
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
@@ -108,8 +108,9 @@
                                                 </span>
                                             </a>
                                             <span class="thumb-info-caption">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+                                                <p>Hello everybody. I'm Mike, a driven, passionate, and aspiring web developer guru!</p>
                                                 <span class="thumb-info-social-icons">
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.mjaime.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>mjaime.com</span></a>
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
                                                     <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>

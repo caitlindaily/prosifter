@@ -71,7 +71,6 @@
                     </strong>
 
                     <p>{{{ $provider->description }}}</p>
-
                     <div class="post-block post-share">
                       <h3><i class="icon icon-share"></i>Share this post</h3>
 
@@ -87,6 +86,7 @@
 
                     </div>
 
+                    <!-- REVIEWS SECTION START -->
                     <div class="post-block post-comments clearfix">
                       <h3><i class="icon icon-comments"></i><a id="prov-review">Reviews</a></h3>
                       @if(Auth::check())
@@ -97,7 +97,7 @@
                           @foreach($provider->posts as $post)
                           <div class="comment">
                             <div class="img-thumbnail">
-                              <img class="avatar" alt="" src="img/avatar-2.jpg">
+                              <img class="avatar" alt="" src="/img/avatar-2.jpg">
                             </div>
                             <div class="comment-block">
                               <div class="comment-arrow"></div>
@@ -111,9 +111,8 @@
                           @endforeach
                         </li>
                       </ul>
-
                     </div>
-
+                    <!-- END REVIEWS SECTION -->
                   </div>
                 </article>
 
