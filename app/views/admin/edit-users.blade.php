@@ -13,7 +13,7 @@
                     <div class="control-group">
                         <label class="control-label" for="firstName">First Name</label>
                         <div class="controls">
-                            {{ Form::text({ser()->first_name}, null, array('class' => 'input-xlarge')) }}
+                            {{ Form::text('first_name', null, array('class' => 'input-xlarge')) }}
                         </div>
                     </div>
                     <div class="control-group">
