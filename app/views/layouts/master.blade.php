@@ -71,7 +71,7 @@
 					<div class="search">
 					{{ Form::open(array('action' => 'ProviderController@index', 'method' => 'GET', 'role' => 'search', 'id' => 'searchForm')) }}
 							<div class="input-group">
-								{{ Form::text('search', Input::get('search'), array('class' => 'form-control', 'placeholder' => 'Search By Company')) }}
+								{{ Form::text('search', Input::get('search'), array('class' => 'form-control search', 'placeholder' => 'Search By Company')) }}
 								<span class="input-group-btn">
 									<button class="btn btn-default" type="submit"><i class="icon icon-search"></i></button>
 								</span>
