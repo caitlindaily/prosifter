@@ -70,10 +70,10 @@
                                             <span class="thumb-info-caption">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
                                                 <span class="thumb-info-social-icons">
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Website"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.github.com/gregmccabe" data-original-title="Github"><i class="icon icon-github-alt"></i><span>Github</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com/Greg_McCabe" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com/in/gregsmccabe" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
                                                 </span>
                                             </span>
                                         </div>
@@ -90,10 +90,10 @@
                                             <span class="thumb-info-caption">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
                                                 <span class="thumb-info-social-icons">
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.caitlindaily.com" data-original-title="Website"><i class="icon icon-globe"></i><span>caitlindaily.com</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.github.com/sweetrocker22" data-original-title="Github"><i class="icon icon-github-alt"></i><span>Github</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com/CaitlinDaily8" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com/in/caitlindaily" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
                                                 </span>
                                             </span>
                                         </div>
@@ -110,10 +110,10 @@
                                             <span class="thumb-info-caption">
                                                 <p>Hello everybody. I'm Mike, a driven, passionate, and aspiring web developer guru!</p>
                                                 <span class="thumb-info-social-icons">
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.mjaime.com" data-original-title="Blog"><i class="icon icon-globe"></i><span>mjaime.com</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="icon icon-facebook"></i><span>Facebook</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
-                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.mjaime.com" data-original-title="Website"><i class="icon icon-globe"></i><span>mjaime.com</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.github.com/mikejaime" data-original-title="Github"><i class="icon icon-github-alt"></i><span>Github</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.twitter.com/mikejaime2" data-original-title="Twitter"><i class="icon icon-twitter"></i><span>Twitter</span></a>
+                                                    <a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com/in/mikejaime" data-original-title="Linkedin"><i class="icon icon-linkedin"></i><span>Linkedin</span></a>
                                                 </span>
                                             </span>
                                         </div>
