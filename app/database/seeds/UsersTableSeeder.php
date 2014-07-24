@@ -6,6 +6,8 @@ class UsersTableSeeder extends Seeder {
     {
         DB::table('users')->delete();
 
+        $faker = Faker\Factory::create();
+
         $first = [
         	'Greg',
         	'Caitlin',
@@ -32,6 +34,19 @@ class UsersTableSeeder extends Seeder {
         	'Alexander'
         ];
 
+        $path = [
+            'greg',
+            'caitlin',
+            'mike',
+            'cole',
+            'jon',
+            'andrew',
+            'lindsey',
+            'jason',
+            'gregory',
+            'danny'
+        ];
+
         for ($i = 0; $i < 10; $i++) {
 
 	        $user = new User();
@@ -41,7 +56,7 @@ class UsersTableSeeder extends Seeder {
 	        $user->email = (strtolower($first[$i])) . "@codeup.com";
 	        $user->password = "letmein";
 	        $user->role = "admin";
-
+            $user->img_path = "/img/users/" . $path[$i] . '.jpg';
 	        $user->save();
         }
 

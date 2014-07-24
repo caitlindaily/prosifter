@@ -20,6 +20,7 @@ class CreateAllTables extends Migration {
             $table->string('email')->unique();
             $table->string('password', 100);
             $table->string('role');
+            $table->string('img_path', 200)->nullable();
             $table->string('remember_token', 100)->nullable();
             $table->timestamps();
 
@@ -45,8 +46,8 @@ class CreateAllTables extends Migration {
             $table->string('phone', 14);
             $table->string('website', 100);
             $table->text('description');
-            $table->string('location');
             $table->string('slug');
+            $table->string('img_path', 200)->nullable();
             $table->foreign('admin_user_id')->references('id')->on('users');
             $table->timestamps();
         });
