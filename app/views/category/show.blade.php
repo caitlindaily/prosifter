@@ -57,7 +57,7 @@
 
 												<div>
 													<input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
-													<div id="ajax-message"></div>
+													<div id="ajax-message-{{ $provider->id }}"></div>
 												</div>
 												<div><h4><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}">{{{ $provider->phone }}}</a></h4></div>
 												<strong><div>{{{ucwords($provider->address)}}}</div>
@@ -120,9 +120,7 @@
     });
 
     $('.rating').on('rating.change', function(event, value) {
-    	console.log('I clicked stars!');
-    	console.log(value);
-
+    	
     	var providerId = $(this).data('id');
     	var starRating = value;
 
@@ -135,7 +133,7 @@
 	        },
 	        dataType: "json",
 	        success: function (data) {
-	            $('#ajax-message').html(data.message);
+	            $('#ajax-message-' + providerId).html(data.message);
 	        }
 	    });
     
