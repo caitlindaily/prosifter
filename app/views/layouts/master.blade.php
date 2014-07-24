@@ -68,6 +68,9 @@
 							<img alt="prosifter" src="/img/logo.png">
 						</a>
 					</h1>
+					<button class="btn navbar-toggle" data-toggle="collapse" data-target=".nav-main-collapse">
+						<i class="icon icon-bars"></i>
+					</button>
 					<!-- SEARCH BAR -->
 					<div class="search">
 					{{ Form::open(array('action' => 'ProviderController@index', 'method' => 'GET', 'role' => 'search', 'id' => 'searchForm')) }}
@@ -456,9 +459,9 @@
 							<div class="col-md-4">
 								<nav id="sub-menu">
 									<ul>
-										<li><a href="page-faq.html">FAQ's</a></li>
-										<li><a href="sitemap.html">Sitemap</a></li>
-										<li><a href="contact-us.html">Contact</a></li>
+										<li><a href="#">FAQ's</a></li>
+										<li><a href="#">Sitemap</a></li>
+										<li><a href="#">Contact</a></li>
 									</ul>
 								</nav>
 							</div>
