@@ -31,12 +31,7 @@
 							<div class="owl-carousel " data-plugin-options='{"items": 1}'>
 								<div>
 									<div class="thumbnail">
-										<img alt="" height="300" class="img-responsive" src="/img/team/team-3.jpg">
-									</div>
-								</div>
-								<div>
-									<div class="thumbnail">
-										<img alt="" height="300" class="img-responsive" src="/img/team/team-9.jpg">
+										<img alt="" height="300" class="img-responsive" src="{{ Auth::user()->img_path }}">
 									</div>
 								</div>
 							</div>

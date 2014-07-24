@@ -36,7 +36,7 @@
                     <div class="owl-carousel" data-plugin-options='{"items":1}'>
                       <div>
                         <div class="img-thumbnail">
-                          <img class="img-responsive" src="/img/blog/blog-image-1.jpg" alt="">
+                          <img class="img-responsive" src="{{{ $provider->img_path }}}" alt="">
                         </div>
                       </div>
                       <div>
@@ -71,7 +71,7 @@
                     <div><h4><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}">{{{ $provider->phone }}}</i></a></h4></div>
                     <strong><div>{{{ucwords($provider->address)}}}</div>
                     <div>{{{ucwords($provider->city)}}}, {{{strtoupper($provider->state)}}} {{{$provider->zip_code}}}</div>
-                    <div><a href="http://maps.google.com/maps?q={{{ str_replace('+', ' ', ($provider->address)) }}},+{{{ str_replace('+', ' ', ($provider->city)) }}},+{{{str_replace('+', ' ', ($provider->state))}}},+{{{ $provider->zip }}}">View Map <i class='icon icon-map-marker'></i></a></div>
+                    <div><a href="http://maps.google.com/maps?q={{{ str_replace('+', ' ', ($provider->address)) }}},+{{{ str_replace('+', ' ', ($provider->city)) }}},+{{{str_replace('+', ' ', ($provider->state))}}},+{{{ $provider->zip_code }}}">View Map <i class='icon icon-map-marker'></i></a></div>
                     <div><a href='http://{{{$provider->website}}}'>Visit Website <i class='icon icon-globe'></i></a></div>
                     </strong>
 
@@ -102,13 +102,14 @@
                           @foreach($provider->posts as $post)
                           <div class="comment">
                             <div class="img-thumbnail">
-                              <img class="avatar" alt="" src="/img/avatar-2.jpg">
+                              <img class="avatar" alt="" src="{{{ $post->user->img_path }}}">
                             </div>
                             <div class="comment-block">
                               <div class="comment-arrow"></div>
                               <span class="comment-by">
                                 <strong>{{{ substr(($post->user->first_name), 0, 1) }}}. {{{ $post->user->last_name }}}</strong>
                               </span>
+                              <div><em><strong>{{{ $post->title }}}</strong></em></div>
                               <p>{{{ $post->body }}}</p>
                               <span class="date pull-right">{{{$post->created_at->setTimezone('America/Chicago')->diffForHumans()}}}</span>
                             </div>

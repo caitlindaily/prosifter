@@ -14,7 +14,7 @@ class CategoryController extends BaseController {
 	public function show($categoryName)
 	{
 		$category = Category::where('name', '=', $categoryName)->first();
-	    $providers = $category->providers()->orderBy('created_at', 'desc')->paginate(2);
+	    $providers = $category->providers()->orderBy('created_at', 'desc')->paginate(5);
 
 	    $data = array(
 	    	'category' => $category,

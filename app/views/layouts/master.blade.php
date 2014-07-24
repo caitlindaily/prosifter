@@ -152,7 +152,7 @@
 													<div class="col-md-8">
 														<div class="user-avatar">
 															<div class="img-thumbnail">
-																<img src="/img/clients/client-1.jpg" alt="">
+																<img src="{{ Auth::user()->img_path }}" alt="">
 															</div>
 															<p><strong>{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</strong>
 															<span>{{ Auth::user()->email }}</span></p>

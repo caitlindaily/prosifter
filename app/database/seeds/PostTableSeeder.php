@@ -5,16 +5,19 @@ class PostTableSeeder extends Seeder {
     public function run() {
 
             DB::table('posts')->delete();
+
+            $faker = Faker\Factory::create();
+
             $user = User::first();
             $provider = Provider::first();
 
-            for ($i = 1; $i <= 150; $i++) {
+            for ($i = 1; $i <= 250; $i++) {
 
                 $post = new Post();
 
                 $post->user_id = rand(1,10);
-                $post->title = "Review Title $i";
-                $post->body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra sapien vel turpis sagittis condimentum congue tempor purus. Fusce vitae nibh eget neque scelerisque mollis. Donec aliquet pellentesque arcu, id porttitor lorem feugiat quis. Sed tempor turpis id erat vehicula sagittis. Ut sit amet sollicitudin lorem. Maecenas consequat sollicitudin risus, vitae convallis enim tincidunt et. Nulla non laoreet dolor, vel ornare leo. Nam accumsan at sem eget ultrices. Maecenas tristique urna augue, vitae sagittis erat volutpat eget. Aenean luctus leo vitae est fringilla ornare vitae ac est.";
+                $post->title = $faker->text($maxNbChars = 30);
+                $post->body = $faker->text($maxNbChars = 150);
                 $post->provider_id = rand(1,50);
                 $post->save();
         }
