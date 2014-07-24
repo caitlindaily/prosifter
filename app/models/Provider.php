@@ -43,7 +43,7 @@ class Provider extends BaseModel {
 
 		if ($rating >= 4.0) {
 		    $color = '#2ACC48';
-		} elseif ($rating > 3.0 && $rating <= 3.9) {
+		} elseif ($rating >= 3.0 && $rating <= 3.9) {
 			$color = '#00F';
 		} elseif ($rating == 0) {
 			$color = '#B8C0DB';
