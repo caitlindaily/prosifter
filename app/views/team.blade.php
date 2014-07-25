@@ -61,14 +61,14 @@
                                     <li class="col-md-4">
                                         <div class="team-item thumbnail">
                                             <a href="about-me.html" class="thumb-info team">
-                                                <img alt="" height="270" src="img/team/team-1.jpg">
+                                                <img alt="" height="270" src="img/team/greg.jpg">
                                                 <span class="thumb-info-title">
                                                     <span class="thumb-info-inner">Greg McCabe</span>
                                                     <span class="thumb-info-type">Web Developer</span>
                                                 </span>
                                             </a>
                                             <span class="thumb-info-caption">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+                                                <p>I am passionate about learning new technologies and developing applications to improve lives and expand knowledge.</p>
                                                 <span class="thumb-info-social-icons">
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.gregsmccabe.com" data-original-title="Website"><i class="icon icon-globe"></i><span>gregsmccabe.com</span></a>
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.github.com/gregmccabe" data-original-title="Github"><i class="icon icon-github-alt"></i><span>Github</span></a>
@@ -81,14 +81,14 @@
                                     <li class="col-md-4">
                                         <div class="team-item thumbnail">
                                             <a href="about-me.html" class="thumb-info team">
-                                                <img alt="" height="270" src="img/team/team-2.jpg">
+                                                <img alt="" height="270" src="img/team/Caitlin2.jpg">
                                                 <span class="thumb-info-title">
                                                     <span class="thumb-info-inner">Caitlin Daily</span>
                                                     <span class="thumb-info-type">Web Developer</span>
                                                 </span>
                                             </a>
                                             <span class="thumb-info-caption">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+                                                <p>Bright, optimistic, and I make dreams happen.</p>
                                                 <span class="thumb-info-social-icons">
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.caitlindaily.com" data-original-title="Website"><i class="icon icon-globe"></i><span>caitlindaily.com</span></a>
                                                     <a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.github.com/sweetrocker22" data-original-title="Github"><i class="icon icon-github-alt"></i><span>Github</span></a>
@@ -101,7 +101,7 @@
                                     <li class="col-md-4">
                                         <div class="team-item thumbnail">
                                             <a href="about-me.html" class="thumb-info team">
-                                                <img alt="" height="270" src="img/team/team-3.jpg">
+                                                <img alt="" height="270" src="img/team/Michael2.jpg">
                                                 <span class="thumb-info-title">
                                                     <span class="thumb-info-inner">Michael Jaime</span>
                                                     <span class="thumb-info-type">Web Developer</span>
