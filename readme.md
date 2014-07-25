@@ -4,7 +4,7 @@ A web app that allows a user to search and "sift" through companies and their re
 
 It was built using PHP, JQuery with AJAX, HTML, CSS, Twitter Bootstrap, and Laravel. 
 
-ProSifter was created during a Codeup bootcamp cohort. It was created in a 10 day time frame with a 3 memeber team as a final project. 
+ProSifter was created during a Codeup bootcamp cohort. It was created in a 10 day time frame with a 3 member team as a final project. 
 
 Feel free to make additions if it's something you would like to work on! 
 
