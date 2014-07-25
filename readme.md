@@ -1,25 +1,19 @@
-## Laravel PHP Framework
+##proSifter
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+A web app that allows a user to search and "sift" through companies and their reviews. Companies can be searched by name or by category. Users can see an average rating for each company and rate them themselves. If users sign up, their personal review can be recorded for a specific company. An administration page was made available to manage users for the app as well.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+It was built using PHP, JQuery with AJAX, HTML, CSS, Twitter Bootstrap, and Laravel. 
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+ProSifter was created during a Codeup bootcamp cohort. It was created in a 10 day time frame with a 3 memeber team as a final project. 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Feel free to make additions if it's something you would like to work on! 
 
-## Official Documentation
+### Setup
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+1. Fork code
 
-### Contributing To Laravel
+2. Run `composer install` in command line  
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+3. then `php artisan migrate`
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+4. and `php artisan db:seed`
