@@ -54,11 +54,12 @@
 												<div>
 													<h2>{{ link_to_action('ProviderController@show', $provider->company_name, $provider->id) }}<k style='margin-left: 50px;'><span style="color: {{$provider->getColor()}}">  {{{ $provider->avgRating() }}}</span></k></h2>
 												</div>
-
+												@if (Auth::check())
 												<div>
 													<input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
 													<div id="ajax-message-{{ $provider->id }}"></div>
 												</div>
+												@endif
 												<div><h4><a href="tel:+1{{{preg_replace('/\D+/', '', ($provider->phone))}}}">{{{ $provider->phone }}}</a></h4></div>
 												<strong><div>{{{ucwords($provider->address)}}}</div>
 												<div>{{{ucwords($provider->city)}}}, {{{strtoupper($provider->state)}}} {{{$provider->zip_code}}}</div>

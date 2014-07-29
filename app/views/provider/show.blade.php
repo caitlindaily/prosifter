@@ -58,10 +58,13 @@
                     @if(Auth::check())
                       {{ link_to_action('ProviderController@createReview', 'Leave Review', $provider->id, array('class'=> 'btn-sm btn-primary pull-right')) }}
                     @endif
+
+                    @if(Auth::check())
                     <div>
-                          <input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
-                          <div id="ajax-message"></div>
-                        </div>
+                      <input value="0" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" data-id="{{ $provider->id }}">
+                      <div id="ajax-message"></div>
+                    </div>
+                    @endif
                     <div class="post-meta">
                       <span><i class="icon icon-user"></i> By <a href="#">John Doe</a> </span>
                       <!-- HOW, REPLACE THIS LINE WITH CATEGORY -->
